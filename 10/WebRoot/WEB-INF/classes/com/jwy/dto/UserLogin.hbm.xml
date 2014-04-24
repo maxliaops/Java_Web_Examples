@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.jwy.dto.UserLogin" table="tb_userlogin" catalog="db_database10">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="native"></generator>
+        </id>
+        <property name="loginName" type="java.lang.String">
+            <column name="loginName" length="20" not-null="true">
+                <comment>登录名称</comment>
+            </column>
+        </property>
+        <property name="pwd" type="java.lang.String">
+            <column name="pwd" length="20" not-null="true">
+                <comment>登录密码</comment>
+            </column>
+        </property>
+        <property name="type" type="java.lang.String">
+            <column name="type" length="1" not-null="true">
+                <comment>用户类型</comment>
+            </column>
+        </property>
+        <property name="mail" type="java.lang.String">
+            <column name="mail" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

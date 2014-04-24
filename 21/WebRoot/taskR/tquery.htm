@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+<link href="../css/style.css" rel="stylesheet">
+<style type="text/css">
+<!--
+.style2 {color: #CC9933}
+-->
+</style>
+</head>
+<script language="javascript">
+<!--
+	function check(){
+		if(form1.resultname.value==""){
+			alert("课题名称不能为空");
+			return false;
+		}
+	}
+-->
+</script>
+<body>
+<table width="610" border="1" align="left" cellpadding="0" cellspacing="0" bordercolor="#ffffff" bordercolordark="#D1E2D6" bordercolorlight="#FFFFFF" bgcolor="#FFFFFF">
+  <form action="tasksql.jsp" method="post" name="form1">
+    <tr align="center" bgcolor="#F7F3EF">
+      <td height="26" colspan="16"><center class="style2">
+        <font size="+1" face="黑体">查询课题入库情况</font>
+      </center></td>
+    </tr>
+    <tr align="center" valign="middle">
+      <td height="21" colspan="16"><p>课题名称:
+          <input name="resultname" type="text" class="txt_grey">
+          <input name="Submit" type="submit" class="btn_grey" value="查询"  onClick="return check()">
+          <input name="Submit2" type="reset" class="btn_grey" value="重置">
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td width="46" height="22" align="center"><span class="head">序号</span></td>
+      <td width="78" align="center"><span class="head">课题形式</span></td>
+      <td width="201" align="center"><span class="head">课题名称</span></td>
+      <td width="63" align="center"><span class="head">课题类型</span></td>
+      <td width="144" align="center"><span class="head">内容摘要</span></td>
+      <td width="64" height="22" colspan="11" class="head">是否入库</td>
+    </tr>
+  </form>
+</table>
+</body>
+</html>

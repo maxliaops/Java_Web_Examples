@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+	"http://struts.apache.org/dtds/struts-2.1.dtd" >
+<struts>
+	<!-- 后台管理 -->
+	<package name="shop.admin" namespace="/admin" extends="shop-default">
+		<!-- 配置拦截器 -->
+		<interceptors>
+			<!-- 验证用户登录的拦截器 -->
+			<interceptor name="loginInterceptor" class="com.lyq.action.interceptor.UserLoginInterceptor"/>
+			<interceptor-stack name="adminDefaultStack">
+				<interceptor-ref name="loginInterceptor"/>
+    			<interceptor-ref name="defaultStack"/>
+			</interceptor-stack>
+		</interceptors>
+		<action name="admin_*" class="indexAction" method="{1}">
+			<result name="top">/WEB-INF/pages/admin/top.jsp</result>
+            <result name="left">/WEB-INF/pages/admin/left.jsp</result>
+            <result name="right">/WEB-INF/pages/admin/right.jsp</result>
+            <interceptor-ref name="adminDefaultStack"/>
+		</action>
+	</package>
+	<package name="shop.admin.user" namespace="/admin/user" extends="shop-default">
+		<action name="user_*" method="{1}" class="userAction"></action>
+	</package>
+    <!-- 类别管理 -->
+    <package name="shop.admin.category" namespace="/admin/product" extends="shop.admin">
+		<action name="category_*" method="{1}" class="productCategoryAction">
+			<result name="list">/WEB-INF/pages/admin/product/category_list.jsp</result>
+			<result name="input">/WEB-INF/pages/admin/product/category_add.jsp</result>
+			<result name="edit">/WEB-INF/pages/admin/product/category_edit.jsp</result>
+			<interceptor-ref name="adminDefaultStack"/>
+		</action>	
+    </package>
+    <!-- 商品管理 -->
+    <package name="shop.admin.product" namespace="/admin/product" extends="shop.admin">
+		<action name="product_*" method="{1}" class="productAction">
+			<result name="list">/WEB-INF/pages/admin/product/product_list.jsp</result>
+			<result name="input">/WEB-INF/pages/admin/product/product_add.jsp</result>
+			<result name="edit">/WEB-INF/pages/admin/product/product_edit.jsp</result>
+			<interceptor-ref name="adminDefaultStack"/>
+		</action>	
+    </package>
+    <!-- 订单管理 -->
+    <package name="shop.admin.order" namespace="/admin/product" extends="shop.admin">
+		<action name="order_*" method="{1}" class="orderAction">
+			<result name="list">/WEB-INF/pages/admin/order/order_list.jsp</result>
+			<result name="select">/WEB-INF/pages/admin/order/order_select.jsp</result>
+			<result name="query">/WEB-INF/pages/admin/order/order_query.jsp</result>
+			<result name="update">/WEB-INF/pages/admin/order/order_update_success.jsp</result>
+			<interceptor-ref name="adminDefaultStack"/>
+		</action>	
+    </package>
+</struts>

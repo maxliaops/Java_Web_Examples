@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/sqljdbc.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/antlr.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-digester.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-fileupload.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-validator.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jakarta-oro.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/struts.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate3.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/javassist-3.12.0.GA.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/cglib-2.2.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/c3p0-0.9.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/ehcache-1.5.0.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/infinispan-core-4.2.0.ALPHA1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jbosscache-core-3.2.1.GA.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/oscache-2.1.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/proxool-0.8.3.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/swarmcache-1.0RC2.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/hibernate-jpa-2.0-api-1.0.0.Final.jar"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>

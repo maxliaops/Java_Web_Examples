@@ -1,0 +1,62 @@
+package electric.dbs;
+import electric.dbs.Dbnews;
+import java.util.Collection;
+import java.util.ArrayList;
+import java.sql.SQLException;
+import java.sql.ResultSet;
+import java.util.Iterator;
+import java.sql.*;
+import javax.servlet.http.*;
+import electric.electricUtils.*;
+/**
+ * <p>Title: </p>
+ * <p>Description: </p>
+ * <p>Copyright: Copyright (c) 2005</p>
+ * <p>Company: </p>
+ * @author not attributable
+ * @version 1.0
+ */
+public class Newsdb {
+  public Newsdb() {
+  }
+
+ public Collection select(int step, int page) {
+      Collection coll = new ArrayList();
+      Connection con=null;
+      ResultSet rs=null;
+      PreparedStatement pstmt=null;
+      int tip = step * (page - 1);
+      try {
+        String sql="SELECT * FROM [NEWS] WHERE STATUS<>1";
+        con = DbConnectionManager.getConnection();
+        pstmt = con.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+        rs = pstmt.executeQuery();
+        System.out.print(tip);
+          if (tip <= 0) {
+              rs.beforeFirst();
+          } else {
+              if (!rs.absolute(tip)) {
+                  rs.beforeFirst();
+              }
+          }
+          for (int i = 1; rs.next() && i <= step; i++) {
+              Dbnews news = new Dbnews();
+              news.setId(rs.getInt(1));
+              news.setMotif(rs.getString(2));
+              news.setKithepeople(rs.getString(3));
+              news.setContent(rs.getString(4));
+              news.setCreateDate(rs.getString(5));
+              news.setCreatepeople(rs.getInt(6));
+              news.setModifyDate(rs.getString(7));
+              news.setModifypeople(rs.getInt(8));
+              news.setStatus(rs.getInt(9));
+              System.out.print(rs.getString(5)+"333");
+              coll.add(news);
+         }
+      } catch (SQLException ex) {
+          System.out.println(ex.getMessage());
+      } finally {
+          return coll;
+      }
+  }
+}

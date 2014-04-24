@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.actionForm.StockMainForm" table="tb_stock_main">
+    <id name="id" column="id" type="int">
+    <generator class="increment"/>
+    </id>
+    <property name="sno" column="sno" type="string"/>
+    <property name="principal"  column="principal"  type="string"/>
+    <property name="providerid"  column="providerid"  type="int"/>
+    <property name="username"  column="username"  type="string" />
+    <property name="createTime"  column="createTime"  type="java.util.Date"/>
+    <property name="state"  column="state"  type="int"/>
+    <set name="stockDetail" lazy="false" cascade="all" inverse="true">
+    <key column="stockid"/>
+    <one-to-many class="com.actionForm.StockDetailForm"/>
+    </set>
+  </class>
+</hibernate-mapping>

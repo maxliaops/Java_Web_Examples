@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>
+       <class name="com.hiernate.persistence.Onduty" table="tb_Onduty" lazy="false">
+          <id name="id" column="Id" type="int" >
+             <generator class="increment"/>
+          </id>
+          <property name="name1" column="name1" type="string"/>
+          <property name="department" column="department" type="string"/>
+          <property name="enroltype" column="enroltype" type="string"/>
+          <property name="definetime" column="definetime" type="string"/>
+          <property name="enroltime" column="enroltime" type="string"/>
+          <property name="enrolremark" column="enrolremark" type="string"/>
+          <property name="state" column="state" type="string"/>
+        </class>
+    </hibernate-mapping>

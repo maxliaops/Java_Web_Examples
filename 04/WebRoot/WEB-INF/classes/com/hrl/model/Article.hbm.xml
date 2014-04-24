@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.hrl.model">
+	<class name="Article" table="tb_article">
+		<id name="articleId">
+			<generator class="native" />
+		</id>
+		<property name="title" type="string" length="255"/>
+		<property name="content" length="2048"/>
+		<property name="emitTime" />
+		<property name="lastUpdateTime" />
+		<property name="articleTypeName" length="255" />
+		<many-to-one name="user" column="userId" class="User" cascade="none" 
+			fetch="join" />
+		<many-to-one name="articleType" column="articleTypeId" class="ArticleType" cascade="none" 
+			fetch="join" />
+		<set name="replies" inverse="true" cascade="all" order-by="replyTime desc">
+			<key column="articleId" />
+			<one-to-many class="Reply" />
+		</set>
+		<set name="scans" inverse="true" cascade="all" order-by="scanTime desc">
+			<key column="articleId" />
+			<one-to-many class="Scan" />
+		</set>
+	</class>
+</hibernate-mapping>

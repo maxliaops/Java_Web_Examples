@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title></title>
+<style type="text/css">
+<!--
+.style3 {color: #000000}
+body {
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #FFFBFF;
+}
+-->
+</style></head>
+<link href="../css/style.css" rel="stylesheet">
+<script language="javascript">
+<!--
+	function check(){
+		if(form1.keyID.value==""){
+			alert("请输入查询的关键字");
+			form1.keyID.focus();
+			return false;
+		}
+	}
+-->
+</script>
+<body>
+ <form action="found.jsp" name="form1" method="post" target="mainFrame">
+    <table width="133" height="445" border="0" align="center" cellpadding="0" cellspacing="0" background="../images/image/shenbao_5.gif">
+      <tr>
+        <td width="133" align="center" valign="top"><table align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="95" height="24" align="center" valign="middle"><span class="style3"> 查询关键字</span></td>
+          </tr>
+          <tr>
+            <td height="24" align="center" valign="middle"><input name="keyID" type="text" class="txt_grey" size="12">
+            </td>
+          </tr>
+          <tr>
+            <td height="24" align="center" valign="middle"><span class="style3">查询内容</span></td>
+          </tr>
+          <tr>
+            <td height="20" align="center" valign="middle"><select name="query" class="txt_grey">
+                <option>课题查询</option>
+                <option>成果查询</option>
+              </select>            </td>
+          </tr>
+          <tr>
+            <td height="26" align="center" valign="middle"><input name="Submit" type="submit" class="btn_grey" value="查询" onClick="return check()"></td>
+          </tr>
+        </table></td>
+      </tr>
+   </table>
+  
+</form>
+</body>
+</html>

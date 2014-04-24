@@ -1,0 +1,14 @@
+[PropertyInfo]
+cname,String,false,false,cname,cname,true,<default>
+password,String,false,false,password,password,true,<default>
+name,String,false,false,name,name,true,<default>
+email,String,false,false,email,email,true,<default>
+tel,String,false,false,tel,tel,true,<default>
+manage,String,false,false,manage,manage,true,<default>
+address,String,false,false,address,address,true,<default>
+resume,String,false,false,resume,resume,true,<default>
+[IconNames]
+
+
+
+

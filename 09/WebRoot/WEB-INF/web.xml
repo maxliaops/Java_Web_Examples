@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<servlet>
+		<servlet-name>dispatcherServlet</servlet-name>
+		<servlet-class>
+			org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>
+				/WEB-INF/View_Config.xml,
+				/WEB-INF/Hibernate_Config.xml,
+				/WEB-INF/System_Config.xml,
+				/WEB-INF/DocuStu_Config.xml,
+				/WEB-INF/DocuTea_Config.xml,
+				/WEB-INF/BookLibrary_Config.xml,
+				/WEB-INF/SourceStu_Config.xml,
+				/WEB-INF/employee_Config.xml
+			</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dispatcherServlet</servlet-name>
+		<url-pattern>*.htm</url-pattern>
+	</servlet-mapping>
+</web-app>

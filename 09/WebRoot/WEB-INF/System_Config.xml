@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd" >
+<beans default-autowire="byName">	
+	<bean id="syscodecontroller"
+		class="com.spring.controller.SysCodeForm">
+		<property name="dao">
+			<ref bean="DAOProxy" />
+		</property>
+	</bean>
+	<bean id="CodeMethodResolver"
+		class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/lCode.htm">CodeList</prop>
+				<prop key="/queryCode.htm">CodeQuery</prop>
+				<prop key="/delCode.htm">CodeDel</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="codeSetControl"
+		class="com.spring.controller.SystemCodeControl">
+		<property name="methodNameResolver">
+			<ref bean="CodeMethodResolver"/>
+		</property>
+		<property name="dao">
+			<ref bean="DAOProxy" />
+		</property>
+	</bean>
+	<bean id="CodeClass"
+		class="com.spring.controller.SystemClassControl">
+		<property name="pageView">
+			<value>systemview/sys_code_class</value>
+		</property>
+		<property name="dao">
+			<ref bean="DAOProxy" />
+		</property>
+	</bean>
+	<!-- 教职工管理模块控制器 -->
+	<bean id="EmployeeMethodNameResolver"
+		class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/courseEmployeeLoader.htm">
+					assignCourse
+				</prop>
+				<prop key="/chargeEmployeeLoader.htm">
+					assignCharge
+				</prop>
+				<prop key="/searchChargeEmployeeLoader.htm">
+					searchCharge
+				</prop>
+				<prop key="/searchTeaCourseEmployeeLoader.htm">
+					searchTeaCourse
+				</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="EmployeeLoader"
+		class="com.spring.controller.EmployeeLoader">
+		<property name="dao">
+			<ref bean="DAOProxy" />
+		</property>
+		<property name="methodNameResolver">
+			<ref bean="EmployeeMethodNameResolver" />
+		</property>
+	</bean>
+
+	<!-- 系统信息模块 -->
+	<bean id="copyright"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName">
+			<value>systemInfo/copyright</value>
+		</property>
+	</bean>
+	<bean id="technic"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName">
+			<value>systemInfo/technic</value>
+		</property>
+	</bean>
+	<!-- 登录模块 -->
+	<bean id="login" class="com.spring.controller.LoginController">
+		<property name="dao">
+			<ref bean="DAOProxy" />
+		</property>
+	</bean>
+	<!-- 用户管理模块 -->
+	<bean id="addUser"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName">
+			<value>userManager/addUser</value>
+		</property>
+	</bean>
+	<bean id="userSearch"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName">
+			<value>userManager/userSearch</value>
+		</property>
+	</bean>
+	<bean id="addUserController"
+		class="com.spring.controller.AddUserController">
+		<property name="dao">
+			<ref bean="DAOProxy" />
+		</property>
+	</bean>
+	<bean id="searchUserController" class="com.spring.controller.SearchUser">
+		<property name="dao">
+			<ref bean="DAOProxy" />
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>
+       <class name="com.hiernate.persistence.Meeting" table="tb_Meeting" lazy="false">
+          <id name="id" column="Id" type="int" >
+             <generator class="increment"/>
+          </id>
+          <property name="MTime" column="MTime" type="string"/>
+          <property name="ZPerson" column="ZPerson" type="string"/>
+          <property name="CPerson" column="CPerson" type="string"/>
+          <property name="subject" column="subject" type="string"/>
+          <property name="address" column="address" type="string"/>
+          <property name="content" column="content" type="string"/>
+       </class>
+    </hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.hibernate.model.EmplAssignCourse" table="empl_assign_course" schema="dbo" catalog="db_school">
+        <id name="lsh" type="java.lang.String">
+            <column name="lsh" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <many-to-one name="docuTeaInfo" class="com.hibernate.model.DocuTeaInfo" fetch="select" lazy="false">
+            <column name="tea_id" length="20" not-null="true" />
+        </many-to-one>
+        <many-to-one name="systemCourseCode" class="com.hibernate.model.SystemCourseCode" fetch="select" lazy="false">
+            <column name="code" length="4" not-null="true" />
+        </many-to-one>
+        <property name="rkrq" type="java.sql.Date">
+            <column name="rkrq" length="23" />
+        </property>
+        <property name="lizhiDate" type="java.sql.Date">
+            <column name="lizhiDate" length="23" />
+        </property>
+    </class>
+</hibernate-mapping>

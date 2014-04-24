@@ -1,0 +1,142 @@
+.bor {
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-style: groove;
+	border-right-style: none;
+	border-bottom-style: ridge;
+	border-left-style: none;
+	border-top-color: #666666;
+	border-right-color: #666666;
+	border-bottom-color: #999999;
+	border-left-color: #666666;
+}
+.text {
+	height: 20px;
+	border: none;
+}
+body,td,th {
+	font-size: 12px;
+}
+a {
+ text-decoration: none;
+ }
+	 
+.br {
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border-top-style: none;
+	border-right-style: dashed;
+	border-bottom-style: dashed;
+	border-left-style: none;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-color: #999999;
+	border-bottom-color: #999999;
+}
+.wenbenkuang {
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+	background:url(../Image/inputbg.gif);
+}
+.area{
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+	background:url(../Image/areabg.gif);
+}
+.table {
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+}
+.go-wenbenkuang {
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	background-color: #eeeeee;
+	cursor: hand;
+	padding: 1px;
+	height: 19px;
+	border-top: 1px solid #FFFFFF;
+	border-right: 1px solid #666666;
+	border-bottom: 1px solid #666666;
+	border-left: 1px solid #FFFFFF;
+}
+.fonts {
+	font-size: 12px;
+	text-decoration: blink;
+}
+body {
+	background-image: url(../Image/background.gif);
+	cursor:url("../image/mouse.ani");
+	SCROLLBAR-FACE-COLOR: #cccccc; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #a5aeb5;
+	SCROLLBAR-SHADOW-COLOR: #a5aeb5;
+	SCROLLBAR-3DLIGHT-COLOR: #cccccc; 
+	SCROLLBAR-ARROW-COLOR: #cccccc;
+	SCROLLBAR-TRACK-COLOR: #a5aeb5; 
+	SCROLLBAR-DARKSHADOW-COLOR: #cccccc;
+	
+}
+.menuitems{
+	margin:2px;padding:1px;word-break:keep-all;background-image:url("../image/dvmenubg3.gif");
+}
+div.quote{margin:5px 20px;border:1px solid #CCCCCC;padding:5px;background:#F3F3F3 ;line-height : normal ;
+}
+div.HtmlCode{margin:5px 20px;border:1px solid #CCCCCC;padding:5px; background:#FDFDDF ;
+font-size:14px;font-family:Tahoma;font-style : oblique;line-height : normal ;font-weight:bold;
+}
+.menuskin {
+	BORDER: #666666 1px solid; VISIBILITY: hidden; FONT: 12px Verdana;
+	POSITION: absolute; 
+	BACKGROUND-COLOR:#EFEFEF;
+	background-image:url("../image/dvmenubg3.gif");
+	background-repeat : repeat-y;
+    Filter: Alpha(Opacity=85);
+	}
+.buttons {
+	font-family: "宋体";
+	font-size: 9pt;
+   	background:url(../Image/inputbg.gif);
+	cursor: hand;
+	padding: 1px;
+	height: 19px;
+	border-top: 1px solid #333333;
+	border-right: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	border-left: 1px solid #333333;
+}
+.bottm {
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: dashed;
+	border-left-style: none;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-color: #999999;
+	border-bottom-color: #999999;
+}
+.right {
+
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border-top-style: none;
+	border-right-style: dashed;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-color: #999999;
+	border-bottom-color: #999999;
+}

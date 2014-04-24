@@ -1,0 +1,7 @@
+<Context>
+	<Resource name="jdbc/mingri" type="javax.sql.DataSource"
+		auth="Container"
+		driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+		url="jdbc:sqlserver://localhost:1433;DatabaseName=db_shopping"
+		username="sa" password="111" maxActive="50" maxIdle="10" maxWait="6000" />
+</Context>

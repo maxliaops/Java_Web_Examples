@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <data-sources />
+  <form-beans>
+    <form-bean name="userForm" type="com.struts.form.UserForm"/><!--配置actionForm,name设置Form名称，type指定Form的完成路径 -->
+  </form-beans>
+  <global-exceptions />
+  <global-forwards/>
+    <action-mappings>
+     <action path="/findUserAction" name="userForm"
+             scope="request"  parameter="method"  
+             type="com.struts.action.FindUserAction"/>
+      <!--配置action类，注意path属性一定要"/"开头，指定转发的路径，name对应actionForm的name属性,scope指定ActionForm的使用范围
+        如果是继承了DispatchAction类则要配置parameter属性设置参数,type指定类的完整路径-->
+      <action path="/findMenuAction" parameter="method"
+              type="com.struts.action.FindMenuAction"></action>
+  </action-mappings>
+  <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+</struts-config>
+

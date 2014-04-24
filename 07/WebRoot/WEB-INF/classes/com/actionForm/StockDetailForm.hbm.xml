@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.actionForm.StockDetailForm" table="tb_stock_detail">
+    <id name="id" column="id" type="int">
+    <generator class="increment"/>
+    </id>
+    <!--<property name="goodsid" column="goodsid" type="int" not-null="true"/>-->
+    <property name="price"  column="price"  type="float" not-null="true"/>
+    <property name="number"  column="number"  type="int" not-null="true"/>
+    <many-to-one name="stockMain" column="stockid" class="com.actionForm.StockMainForm" cascade="none" fetch="join" lazy="false"/>
+    <many-to-one name="stockViewMain" column="stockid" insert="false" update="false" class="com.actionForm.StockMainViewForm" cascade="none" fetch="join" lazy="false"/>
+    <many-to-one name="goods" column="goodsid" class="com.actionForm.GoodsForm" cascade="none" fetch="join" lazy="false"/>
+  </class>
+</hibernate-mapping>

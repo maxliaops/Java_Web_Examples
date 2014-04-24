@@ -1,0 +1,81 @@
+body {
+        background: #F3FAFF;
+        color: #000;
+        font: 12px Verdana, Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+}
+a:link, a:visited {
+        color: #FF2A84;
+        text-decoration: underline;
+}
+a:hover, a:active {
+        color: #FFF;
+        text-decoration: none;
+        background: #FF2A84;
+}
+#navigation {
+		background-image: url("mainBackImg.jpg");
+ /*       border-bottom: 1px solid #A1A1A1;
+        margin: 1em 0 0;*/
+        padding: 0.7em 0 0;
+        font-weight: bold;
+}
+#navigation ul, #navigation ul li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+}
+#navigation ul {
+        padding: 5px 0 5px;
+        text-align: center;
+}
+#navigation ul li {
+        display: inline;
+}
+#navigation ul li a {
+        background: url(tableft.gif) no-repeat left top;
+        color: #FFF;
+        text-decoration: none;
+        padding: 5px 0;
+}
+#navigation ul li span {
+        background: url(tabright.gif) no-repeat right top;
+        padding: 5px 7px 5px 3px;
+        margin: 4px 0 4px 4px;
+}
+#navigation ul li a:hover span {
+        text-decoration: underline;
+        background-position: 100% -75px;
+}
+#navigation ul li a:hover {
+        background-position: 0 -75px;
+}
+#navigation #current a {
+        background-position: 0 -150px;
+}
+#navigation #current a span {
+        background-position: 100% -150px;
+}
+
+
+/*- Internet Explorer...It's Hacktastic!--------------------------- */
+
+/*\*//*/
+#navigation ul li a {
+        display: inline-block;
+        white-space: nowrap;
+        width: 1px;
+}
+
+#navigation ul {
+        padding-bottom: 0;
+        margin-bottom: -1px;
+}
+/**/
+
+/*\*/
+* html #navigation ul li a {
+        padding: 0;
+}
+/**/

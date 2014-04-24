@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC 
+	"-//OpenSymphony Group//XWork Validator 1.0.3//EN" 
+	"http://www.opensymphony.com/xwork/xwork-validator-1.0.3.dtd" >
+<validators>
+	<field name="name">
+		<field-validator type="requiredstring" >
+			<message>类别名称不能为空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">1</param>
+			<param name="maxLength">32</param>
+			<message>类别名称长度必须在${minLength}到${maxLength}之间</message>
+		</field-validator>
+	</field>
+</validators>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd" >
+<beans default-autowire="byName">
+	<!--定义控制器转发视图类 -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass">
+			<value>org.springframework.web.servlet.view.JstlView</value>
+		</property>
+		<property name="prefix">
+			<value>/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>	
+	<!--定义请求映射处理器类-->
+	<bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<!-- 学生档案管理模块 -->
+				<prop key="/stuInfoInsert.htm">stuinfcontroller</prop>
+				<prop key="/studentReg.htm">studentReg</prop>				
+				<prop key="/listStuModi.htm">infoListController</prop>
+				<prop key="/listStuModiSave.htm">infoListController</prop>
+				<prop key="/studentRegList.htm">studentRegList</prop>
+				<prop key="/listStuRegSerach.htm">infoListController</prop>
+				<prop key="/getAllstuinfo.htm">infoListController</prop>
+				<prop key="/*infoList.htm">infoListController</prop>
+				<prop key="/createStuid.htm">infoListController</prop>
+				
+				<!-- 教师档案管理模块 -->
+				<prop key="/*TeacherInfo.htm">teaLoader</prop>
+				<prop key="/teacherController.htm">teaRegController</prop>
+				
+				<!-- 代码维护管理模块 -->
+				<prop key="sysformcode.htm">syscodecontroller</prop>
+				<prop key="/*Code.htm">codeSetControl</prop>
+				<prop key="/sysformclass.htm">CodeClass</prop>
+			
+				<!-- 图书档案管理模块 -->
+				<prop key="/*BookOperation.htm">BookManager</prop>
+				<prop key="/bookReturn.htm">bookReturn</prop>
+				<prop key="/bookBorrow.htm">bookBorrow</prop>
+				<prop key="/bookReg.htm">bookReg</prop>
+				<prop key="/borrowService.htm">borrowService</prop>
+				
+				<!-- 成绩管理模块 -->
+				<prop key="/*CjInfo.htm">CjLoader</prop>
+				<prop key="/CjReg.htm">CjRegBatchController</prop>
+				<prop key="/*SourceList.htm">CjLoader</prop>
+				
+				<!-- 教职工管理模块 -->
+				<prop key="/*EmployeeLoader.htm">EmployeeLoader</prop>
+				
+				<!-- 系统信息模块 -->
+				<prop key="/copyright.htm">copyright</prop>
+				<prop key="/technic.htm">technic</prop>
+				
+				<!-- 登录模块 -->
+				<prop key="/login.htm">login</prop>
+				
+				<!-- 用户管理模块 -->
+				<prop key="/addUser.htm">addUser</prop>
+				<prop key="/addUserController.htm">addUserController</prop>
+				<prop key="/userSearch.htm">userSearch</prop>
+				<prop key="/searchUserController.htm">searchUserController</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

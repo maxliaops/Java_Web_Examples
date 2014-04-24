@@ -1,0 +1,89 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>添加人员信息</title>
+<style type="text/css">
+<!--
+.style1 {color: #CC9933}
+-->
+</style>
+</head>
+<link href="../css/style.css" rel="stylesheet">
+<script language="javascript">
+<!--
+	function check(){
+		if(form1.username.value==""){
+			alert("请添加的用户名");
+			form1.username.focus();
+			return false;
+		}
+		if(form1.password.value==""){
+			alert("请输入用户的密码");
+			form1.password.focus();
+			return false;
+		}
+		if(form1.password.value!=form1.password1.value){
+			alert("两次密码输入不正确");
+			return false;
+		}
+		if(form1.office.value==""){
+			alert("请输入用户所在的科室");
+			form1.office.focus();
+			return false;
+		}
+		if(form1.name.value==""){
+			alert("请输入用户的真实姓名");
+			form1.name.focus();
+			return false;
+		}
+	}
+-->
+</script>
+<body>
+<p>&nbsp;</p>
+<table width="312" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="tableBorder">
+  <form action="Ucheck.jsp" name="form1" method="post">
+  <tr align="center" valign="middle" bgcolor="#F7F3EF">
+    <td height="26" colspan="3"><center class="style1">
+      <font size="+1" face="黑体">添加用户信息</font>
+    </center></td>
+  </tr>
+  <tr>
+    <td width="36">&nbsp;</td>
+    <td width="100" height="24">用户名:</td>
+    <td width="176" height="24"><input name="username" type="text" class="txt_grey"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="24">密码:</td>
+    <td height="24"><input name="password" type="password" class="txt_grey"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="24">确认密码:</td>
+    <td height="24"><input name="password1" type="password" class="txt_grey"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="24">科室:</td>
+    <td height="24"><input name="office" type="text" class="txt_grey"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="24">真实姓名:</td>
+    <td height="24"><input name="name" type="text" class="txt_grey"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="24">权限分配:</td>
+    <td height="24"><input name="popedom" type="text" class="txt_grey"></td>
+  </tr>
+  <tr align="center">
+    <td height="24" colspan="3" bordercolor="#D6D3CE" bgcolor="#F7F3EF">
+	<input type="submit" name="Submit" value="添加" onClick="return check()">
+      <input type="reset" name="Submit2" value="重置"></td>
+  </tr>
+  </form>
+</table>
+</body>
+</html>

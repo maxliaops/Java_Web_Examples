@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>
+       <class name="com.hiernate.persistence.Tongxun" table="tb_Tongxun" lazy="false">
+          <id name="id" column="Id" type="int" >
+             <generator class="increment"/>
+          </id>
+          <property name="name1" column="name1" type="string"/>
+          
+       </class>
+    </hibernate-mapping>

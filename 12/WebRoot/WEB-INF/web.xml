@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>LibraryManage</display-name>
+	<!-- 图书馆信息 -->
+	<servlet>
+		<servlet-name>Library</servlet-name>
+		<servlet-class>com.action.Library</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Library</servlet-name>
+		<url-pattern>/library</url-pattern>
+	</servlet-mapping>
+	<!-- 管理员 -->
+	<servlet>
+		<servlet-name>Manager</servlet-name>
+		<servlet-class>com.action.Manager</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Manager</servlet-name>
+		<url-pattern>/manager</url-pattern>
+	</servlet-mapping>
+	<!-- 参数设置 -->
+	<servlet>
+		<servlet-name>Parameter</servlet-name>
+		<servlet-class>com.action.Parameter</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Parameter</servlet-name>
+		<url-pattern>/parameter</url-pattern>
+	</servlet-mapping>
+	<!-- 读者信息 -->
+	<servlet>
+		<servlet-name>Reader</servlet-name>
+		<servlet-class>com.action.Reader</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Reader</servlet-name>
+		<url-pattern>/reader</url-pattern>
+	</servlet-mapping>
+	<!-- 读者类型 -->
+	<servlet>
+		<servlet-name>ReaderType</servlet-name>
+		<servlet-class>com.action.ReaderType</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReaderType</servlet-name>
+		<url-pattern>/readerType</url-pattern>
+	</servlet-mapping>
+	<!-- 图书信息 -->
+	<servlet>
+		<servlet-name>Book</servlet-name>
+		<servlet-class>com.action.Book</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Book</servlet-name>
+		<url-pattern>/book</url-pattern>
+	</servlet-mapping>	
+	<!-- 书架信息 -->
+	<servlet>
+		<servlet-name>BookCase</servlet-name>
+		<servlet-class>com.action.BookCase</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BookCase</servlet-name>
+		<url-pattern>/bookCase</url-pattern>
+	</servlet-mapping>
+	<!-- 图书类型 -->
+	<servlet>
+		<servlet-name>BookType</servlet-name>
+		<servlet-class>com.action.BookType</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BookType</servlet-name>
+		<url-pattern>/bookType</url-pattern>
+	</servlet-mapping>	
+	<!-- 借阅信息-->
+	<servlet>
+		<servlet-name>Borrow</servlet-name>
+		<servlet-class>com.action.Borrow</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Borrow</servlet-name>
+		<url-pattern>/borrow</url-pattern>
+	</servlet-mapping>			
+	<!-- 配置字符编码过滤器 -->
+	<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>com.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>GBK</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+
+
+
+	<!-- 设置默认文件名称 -->
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<login-config>
+		<auth-method>BASIC</auth-method>
+	</login-config>
+</web-app>

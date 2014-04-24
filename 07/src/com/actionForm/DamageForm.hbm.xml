@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.actionForm.DamageForm" table="tb_damage">
+    <id name="id" column="id" type="int">
+    <generator class="increment"/>
+    </id>
+    <!--property name="goodsid"  column="goodsid"  type="int"/-->
+    <!--property name="branchid"  column="branchid"  type="int"/-->
+    <property name="damagenum"  column="damagenum"  type="int"/>
+    <property name="createtime"  column="createtime"  type="java.util.Date"/>
+    <property name="principal"  column="principal"  type="string"/>
+    <property name="username"  column="username"  type="string" />
+    <property name="cause"  column="cause"  type="string" />
+    <many-to-one name="goods" column="goodsid" class="com.actionForm.GoodsForm" cascade="none" fetch="join" lazy="false"/>
+    <many-to-one name="branch" column="branchid" class="com.actionForm.BranchForm" cascade="none" fetch="join" lazy="false"/>
+  </class>
+</hibernate-mapping>

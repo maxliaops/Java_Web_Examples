@@ -1,0 +1,17 @@
+[PropertyInfo]
+age,int,false,false,age,age,true,<default>
+birthday,String,false,false,birthday,birthday,true,<default>
+email,String,false,false,emial,emial,true,<default>
+knowledge,String,false,false,knowledge,knowledge,true,<default>
+name,String,false,false,name,name,true,<default>
+password,String,false,false,password,password,true,<default>
+resume,String,false,false,resume,resume,true,<default>
+school,String,false,false,school,school,true,<default>
+sex,int,false,false,sex,sex,true,<default>
+sname,String,false,false,sname,Sname,true,<default>
+specialty,String,false,false,specialty,specialty,true,<default>
+[IconNames]
+
+
+
+

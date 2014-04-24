@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.hrl.model">
+	<class name="User" table="tb_user">
+		<id name="userId">
+			<generator class="native" />
+		</id>
+		<property name="userName" length="45"/>
+		<property name="password" length="45"/>
+		<property name="sex" length="2"/>
+		<property name="registerTime"/>
+		<property name="birthday" length="20" />
+		<property name="email" length="45"/>
+		<property name="tel" length="20"/>
+		<property name="isAdmin" />
+		<set name="articles" inverse="true" order-by="lastUpdateTime desc">
+			<key column="userId" />
+			<one-to-many class="Article" />
+		</set>
+		<set name="replies" inverse="true" order-by="replyTime desc">
+			<key column="userId" />
+			<one-to-many class="Reply" />
+		</set>
+	</class>
+</hibernate-mapping>

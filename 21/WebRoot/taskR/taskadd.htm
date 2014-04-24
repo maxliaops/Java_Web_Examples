@@ -1,0 +1,254 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>课题填报表</title>
+<style type="text/css">
+<!--
+.style1 {color: #CC9966}
+-->
+</style>
+</head>
+<link href="../css/style.css" rel="stylesheet">
+<body>
+<script language="JavaScript">
+function CheckDate(INDate)
+{ if(INDate=="")
+    {return true;}
+	subYY=INDate.substr(0,4)
+	//转换月份
+	if(INDate.indexOf('-',0)!=-1){	separate="-"}
+	else{
+		if(INDate.indexOf('/',0)!=-1){separate="/"}
+		else {return true;}}
+		area=INDate.indexOf(separate,0)
+		subMM=INDate.substr(area+1,INDate.indexOf(separate,area+1)-(area+1))
+		if(subMM.length<2){subMM="0"+subMM}
+	//转换日
+	area=INDate.lastIndexOf(separate)
+	subDD=INDate.substr(area+1,INDate.length-area-1)
+	if(eval(subDD)<10){subDD="0"+eval(subDD)}
+	NewDate=subYY+"-"+subMM+"-"+subDD
+	if(NewDate.length!=10){return true;}
+    if(NewDate.substr(4,1)!="-"){return true;}
+    if(NewDate.substr(7,1)!="-"){return true;}
+	if(NewDate.substr(5,2)>"12"){return true;}
+	if(NewDate.substr(8,2)>"31"){return true;}
+   return false;}
+</script>
+<script language="javascript">
+<!--
+	function check(){
+		if(form1.Taskname.value==""){
+			alert("请输入你的课题名称");
+			form1.Taskname.focus();
+			return false;
+		}
+		if(form1.Taskword.value==""){
+			alert("输入你的课题研究领域");
+			form1.Taskword.focus();
+			return false;
+		}
+		if(form1.Taskpass.value==""){
+			alert("输入你的课题审批单位");
+			form1.Taskpass.focus();
+			return false;
+		}
+		if(form1.Ctime.value==""){
+			alert("请输入你的立项时间");
+			form1.Ctime.focus();
+			return false;
+		}else{
+			if(CheckDate(form1.Ctime.value)){
+				alert("您输入的日期有误，请重新输入！");
+				return false;
+			}
+		}
+		if(form1.Fultime.value==""){
+			alert("请输入你的完成时间");
+			form1.Fultime.focus();
+			return false;
+		}else{
+			if(CheckDate(form1.Fultime.value)){
+				alert("您输入的日期有误，请重新输入！");
+				return false;
+			}
+		}
+		if(form1.Workname.value==""){
+			alert("请输入课题主持人的姓名");
+			form1.Workname.focus();
+			return false;
+		}
+		if(form1.Test.value==""){
+			alert("请输入本课题的内容摘要");
+			form1.Test.focus();
+			return false;
+		}
+		if(form1.keyid.value==""){
+			alert("请输入申报的关键字");
+			form1.keyid.focus();
+			return false;
+		}
+		if(form1.text.value==""){
+			alert("请输入申报项目的主题词");
+			form1.text.focus();
+			return false;
+		}
+	}
+-->
+</script>
+<table width="610" height="311" border="0" align="left" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF" class="tableBorder">
+<form action="tcheck.jsp" method="post" name="form1">
+  <tr align="center" bgcolor="#F7F3EF">
+    <td height="26" colspan="7"><center class="style1">
+      <font size="+2" face="黑体">课&#39064;&#30003;报表</font>
+    </center></td>
+  </tr>
+  <tr align="center">
+    <td height="18" colspan="7">请选择课题：
+    <input name="Choose" type="radio" value="国家级课题" checked>
+    国家级课题
+    <input type="radio" name="Choose" value="省部级课题">
+    省部级课题
+    <input name="Choose" type="radio" value="地厅级课题">
+    地厅级课题
+    <input type="radio" name="Choose" value="其它课题">
+    其它课题</td>
+  </tr>
+  <tr>
+    <td width="11" height="23">&nbsp;</td>
+    <td width="96" height="23">课题名称:</td>
+    <td height="23" colspan="5"><input name="Taskname" type="text" class="txt_grey" size="80"></td>
+  </tr>
+  <tr>
+    <td height="23">&nbsp;</td>
+    <td height="23">主题词:</td>
+    <td height="23" colspan="5"><input name="text" type="text" class="txt_grey" size="80"></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="21">研究领域:</td>
+    <td height="21" colspan="5"><textarea name="Taskword" cols="80" rows="3" class="txt_grey"></textarea></td>
+  </tr>
+  <tr>
+    <td height="23">&nbsp;</td>
+    <td height="23">关键字:</td>
+    <td height="23" colspan="5"><input name="keyid" type="text" class="txt_grey" size="80"></td>
+    </tr>
+  <tr>
+    <td height="23">&nbsp;</td>
+    <td height="23">课题类型:</td>
+    <td width="112" height="23"><select name="Tasktype" class="wenbenkuang">
+      <option>重点课题</option>
+      <option>一般课题</option>
+      <option>青年课题</option>
+      <option>自助课题</option>
+      <option>委托课题</option>
+      <option>合作课题</option>
+      <option>国际合作</option>
+      <option>其它</option>
+    </select></td>
+    <td width="72" height="23">成果形式:</td>
+    <td width="96" height="23"><select name="Result" class="wenbenkuang">
+      <option>论文</option>
+      <option>专著</option>
+      <option>译著</option>
+      <option>报告文学</option>
+      <option>电子出版物</option>
+      <option>工具书</option>
+      <option>电脑软件</option>
+      <option>其它</option>
+    </select></td>
+    <td width="70" height="23">&nbsp;</td>
+    <td width="153" height="23">&nbsp;</td>
+    </tr>
+  <tr>
+    <td height="23">&nbsp;</td>
+    <td height="23">研究形式:</td>
+    <td height="23"><select name="Study" class="wenbenkuang">
+      <option value="综合">综合&nbsp;&nbsp;&nbsp;&nbsp;</option>
+      <option value="基础">基础</option>
+      <option value="应用">应用</option>
+      <option value="其它">其它</option>
+    </select></td>
+    <td height="23">经费来源:</td>
+    <td height="23"><select name="Outlay" class="wenbenkuang">
+      <option>基金会</option>
+      <option>国家拔款</option>
+      <option>自筹</option>
+      <option>单位的资助</option>
+      <option>其它</option>
+    </select></td>
+    <td height="23">&nbsp;</td>
+    <td height="23">&nbsp;</td>
+    </tr>
+  <tr>
+    <td height="23">&nbsp;</td>
+    <td height="23">课题批准单位:</td>
+    <td height="23" colspan="5"><input name="Taskpass" type="text" class="txt_grey" size="80"></td>
+  </tr>
+  <tr>
+    <td height="23">&nbsp;</td>
+    <td height="23">立项时间:</td>
+    <td height="23" colspan="2"><input name="Ctime" type="text" class="txt_grey"></td>
+    <td height="23" colspan="3" align="left">完成时间:
+      <input name="Fultime" type="text" class="txt_grey"></td>
+    </tr>
+  <tr>
+    <td height="23">&nbsp;</td>
+    <td height="23">课题主持人:</td>
+    <td height="23" colspan="2"><input name="Workname" type="text" class="txt_grey"> </td>
+    <td height="23" colspan="3" align="left">所在省份:      
+      <select name="Province">
+        <option selected>吉林省</option>
+        <option>辽宁省</option>
+        <option>黑龙江省</option>
+        <option>北京市</option>
+        <option>天津市</option>
+        <option>河北省</option>
+        <option>山东省</option>
+        <option>山西省</option>
+        <option>宁夏自治区</option>
+        <option>内蒙自治区</option>
+        <option>新疆自治区</option>
+        <option>青海省</option>
+        <option>甘肃省</option>
+        <option>陕西省</option>
+        <option>河南省</option>
+        <option>安徽省</option>
+        <option>江苏省</option>
+        <option>上海市</option>
+        <option>浙江省</option>
+        <option>湖北省</option>
+        <option>重庆市</option>
+        <option>四川省</option>
+        <option>贵州省</option>
+        <option>湖南省</option>
+        <option>江西省</option>
+        <option>福建省</option>
+        <option>广东省</option>
+        <option>广西省</option>
+        <option>云南省</option>
+        <option>海南省</option>
+        <option>澳门自治区</option>
+        <option>香港自治区</option>
+        <option>台湾省</option>
+        </select></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="21">内容摘要:</td>
+    <td height="21" colspan="5"><textarea name="Test" cols="80" rows="3" class="txt_grey"></textarea></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td height="21">备注:</td>
+    <td height="21" colspan="5"><textarea name="Demo" cols="80" rows="3" class="txt_grey"></textarea></td>
+  </tr>
+  <tr align="center" bgcolor="#F7F3EF">
+    <td height="22" colspan="7"><input name="Submit" type="Submit" class="btn_grey" value="提交" onClick="return check()">
+    <input name="Submit2" type="reset" class="btn_grey" value="重置"></td>
+  </tr>
+  </form>
+</table>
+</body>
+</html>

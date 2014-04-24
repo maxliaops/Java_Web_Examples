@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC 
+	"-//OpenSymphony Group//XWork Validator 1.0.3//EN" 
+	"http://www.opensymphony.com/xwork/xwork-validator-1.0.3.dtd" >
+<validators>
+	<field name="username">
+		<field-validator type="requiredstring" >
+			<message>用户名不能为空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">5</param>
+			<param name="maxLength">32</param>
+			<message>用户名长度必须在${minLength}到${maxLength}之间</message>
+		</field-validator>
+	</field>
+	<field name="password">
+		<field-validator type="requiredstring">
+			<message>密码不能为空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">6</param>
+			<message>密码长度必须在${minLength}位以上</message>
+		</field-validator>
+	</field>
+</validators>

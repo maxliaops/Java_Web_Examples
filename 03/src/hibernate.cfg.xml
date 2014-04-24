@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+ "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+	<!-- Hibernate配置文件 -->
+<hibernate-configuration>
+	<session-factory>
+		<!-- 数据库驱动 -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- 数据库连接的URL -->
+		<property name="connection.url">jdbc:mysql://localhost:3306/db_blog</property>
+		<!-- 数据库连接用户名 -->
+		<property name="connection.username">root</property>
+		<!-- 数据库连接密码 -->
+		<property name="connection.password">111</property>
+		<!-- Hibernate方言 -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!-- 打印SQL语句 -->
+		<property name="show_sql">true</property>
+		<!-- 映射文件  -->
+		<mapping resource="com/mr/model/UserInfo.hbm.xml" />
+		<mapping resource="com/mr/model/AdminInfo.hbm.xml" />
+		<mapping resource="com/mr/model/ArticleInfo.hbm.xml" />
+		<mapping resource="com/mr/model/ReArticleInfo.hbm.xml" />
+		<mapping resource="com/mr/model/PhotoInfo.hbm.xml" />
+		<mapping resource="com/mr/model/Info.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

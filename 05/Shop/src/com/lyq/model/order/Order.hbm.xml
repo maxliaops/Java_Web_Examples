@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >	
+<hibernate-mapping package="com.lyq.model.order">
+	<class name="Order" table="tb_order">
+		<id name="orderId" type="string" length="30">
+			<generator class="assigned"/>
+		</id>
+		<property name="name" not-null="true" length="50"/>
+		<property name="address" not-null="true" length="200"/>
+		<property name="mobile" not-null="true" length="11"/>
+		<property name="totalPrice"/>
+		<property name="createTime" />
+		<property name="paymentWay" type="com.lyq.util.hibernate.PaymentWayType" length="15"/>
+		<property name="orderState" type="com.lyq.util.hibernate.OrderStateType" length="10"/>
+		<!-- 多对一映射用户 -->
+		<many-to-one name="customer" column="customerId"/>
+		<!-- 映射订单项 -->
+		<set name="orderItems" inverse="true" lazy="extra" cascade="all">
+			<key column="orderId"/>
+			<one-to-many class="OrderItem"/>
+		</set>
+	</class>
+</hibernate-mapping>

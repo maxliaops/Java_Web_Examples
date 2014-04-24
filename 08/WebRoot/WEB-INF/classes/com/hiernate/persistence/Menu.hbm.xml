@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>
+       <class name="com.hiernate.persistence.Menu" table="tb_Menu" lazy="false">
+          <id name="id" column="Id" type="long" >
+             <generator class="increment"/>
+          </id>
+          <property name="modeId" column="modeId" type="long"/>
+          <property name="linkurl" column="linkUrl" type="string"/>
+          <property name="menuName" column="menuName" type="string"/>
+       </class>
+    </hibernate-mapping>

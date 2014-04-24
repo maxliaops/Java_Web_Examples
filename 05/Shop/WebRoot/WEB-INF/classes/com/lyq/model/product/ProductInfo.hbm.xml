@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.lyq.model.product">
+	<class name="ProductInfo" table="tb_productInfo">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="name" not-null="true" length="100"/>
+		<property name="description" type="text"/>
+		<property name="createTime"/>
+		<property name="baseprice"/>
+		<property name="marketprice"/>
+		<property name="sellprice"/>
+		<property name="sexrequest" type="com.lyq.util.hibernate.SexType" length="5"/>
+		<property name="commend"/>
+		<property name="clickcount"/>
+		<property name="sellCount"/>
+		<!-- 多对一映射类别 -->
+		<many-to-one name="category" column="categoryId"/>
+		<!-- 多对一映射上传文件 -->
+		<many-to-one name="uploadFile" unique="true" cascade="all" lazy="false"/>
+	</class>
+</hibernate-mapping>

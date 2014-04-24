@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.actionForm.GoodsForm" table="tb_goods">
+    <id name="id" column="id" type="int">
+    <generator class="increment"/>
+    </id>
+    <property name="name" column="name" type="string" not-null="true"/>
+    <property name="spec"  column="spec"  type="string" not-null="true"/>
+    <property name="unit"  column="unit"  type="string" not-null="true"/>
+    <property name="price"  column="price"  type="float" not-null="true"/>
+    <property name="producer"  column="producer"  type="string"/>
+    <property name="ifdel"  column="ifdel"  type="byte"/>
+    <set name="stockDetail" lazy="false" cascade="all" inverse="true">
+    <key column="goodsid"/>
+    <one-to-many class="com.actionForm.StockDetailForm"/>
+    </set>
+    <set name="loan" lazy="false" cascade="all" inverse="true">
+    <key column="goodsid"/>
+    <one-to-many class="com.actionForm.LoanForm"/>
+    </set>
+    <set name="getuse" lazy="false" cascade="all" inverse="true">
+    <key column="goodsid"/>
+    <one-to-many class="com.actionForm.GetUseForm"/>
+    </set>
+    <set name="damage" lazy="false" cascade="all" inverse="true">
+    <key column="goodsid"/>
+    <one-to-many class="com.actionForm.DamageForm"/>
+    </set>
+  </class>
+</hibernate-mapping>

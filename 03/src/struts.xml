@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>  
+   <package name="MR" extends="struts-default">
+       <action name="blogMain_*" class="com.mr.webiter.BlogMainAction" method="{1}">
+           <result name="blogMain">/blog_main.jsp</result>     
+       </action> 
+       <action name="userInfo_*" class="com.mr.webiter.UserInfoAction" method="{1}">
+           <result name="input">/blog/userManager/{1}.jsp</result>  
+           <result name="success">/blog/userManager/{1}.jsp</result>  
+           <result name="queryUser">/admin/user/user_query.jsp</result>   
+           <result name="operationUser">/dealwith.jsp</result>   
+           <result name="goinUser">/blog/blog.jsp</result>   
+           <result name="goinUserManager">/blog/userManager/user_query.jsp</result> 
+           <result name="userSelectOne">/blog/userManager/user_update.jsp</result> 
+           <result name="forwardAddArticle">/blog/userManager/article_add.jsp</result>  
+           <result name="friend_query">/blog/userManager/friends_query.jsp</result>                                                                         
+       </action> 
+       <action name="adminInfo_*" class="com.mr.webiter.AdminAction" method="{1}">
+           <result name="input">/admin/admin/{1}.jsp</result>  
+           <result name="success">/admin/admin/{1}.jsp</result>       
+           <result name="operationAdmin">/dealwith.jsp</result>                      
+       </action> 
+       <action name="articleInfo_*" class="com.mr.webiter.ArticleAction" method="{1}">
+          <result name="input">/blog/userManager/{1}.jsp</result>  
+          <result name="success">/blog/userManager/{1}.jsp</result>   
+          <result name="article_forwardUpdate">/blog/userManager/article_update.jsp</result>              
+          <result name="operationArticle">/dealwith.jsp</result>   
+          <result name="f_article_query">/blog/blog_articleInfo.jsp</result>    
+          <result name="admin_articleQuery">/admin/article/article_query.jsp</result>   
+          <result name="admin_articleQueryOne">/admin/article/article_queryOne.jsp</result> 
+       </action> 
+       <action name="reArticleInfo_*" class="com.mr.webiter.ReArticleAction" method="{1}">     
+          <result name="operReArticle">/dealwith.jsp</result>            
+       </action> 
+       <action name="photoInfo_*" class="com.mr.webiter.PhotoAction" method="{1}">     
+         <param name="savePath">/photo</param>
+            <interceptor-ref name ="fileUpload"> 
+                <param name ="allowedTypes">image/bmp,image/png,image/gif,image/pjpeg</param> 
+                <param name="maximumSize">1024000</param>
+            </interceptor-ref> 
+            <interceptor-ref name ="defaultStack"/>         
+           <result name="input">/blog/userManager/{1}.jsp</result>  
+           <result name="success">/blog/userManager/{1}.jsp</result>             
+           <result name="operPhoto">/dealwith.jsp</result>
+           <result name="fphoto_query">/blog/photo_query.jsp</result> 
+           <result name="admin_photoQuery">/admin/photo/photo_query.jsp</result> 
+       </action>        
+       <action name="info_*" class="com.mr.webiter.InfoAction" method="{1}">              
+           <result name="f_operInfo">/dealwith.jsp</result>  
+           <result name="f_queryInfo">/blog/info_query.jsp</result>
+           <result name="queryInfo">/blog/userManager/info_query.jsp</result>          
+       </action>        
+   </package>
+</struts>
+    
+    

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>
+       <class name="com.hiernate.persistence.User" table="tb_User" lazy="false"><!-- name指定持久化类的包名和类名，table指定数据库中的表名 -->
+          <id name="id" column="Id" type="int" >
+             <generator class="increment" /> <!--确定id为主键，增量为１-->
+          </id>
+          <property name="userName" column="userName" type="string" />
+          <property name="pwd" column="pwd" type="string"/>
+          <property name="name" column="name" type="string"/>
+          <property name="purview" column="purview" type="string"/>
+          <property name="branch" column="branch" type="string"/>
+          <property name="job" column="job" type="string"/>
+          <property name="sex" column="sex" type="string"/>
+          <property name="email" column="email" type="string"/>
+          <property name="tel" column="tel" type="string"/>
+          <property name="address"  column="address" type="string"/>
+          <property name="bestMan" column="bestMan" type="int"/>
+       </class>
+    </hibernate-mapping>

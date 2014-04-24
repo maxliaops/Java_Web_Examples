@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.lyq.model.user">
+	<class name="Customer" table="tb_customer">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="username" not-null="true" length="50"/>
+		<property name="password" not-null="true" length="50"/>
+		<property name="realname" length="20"/>
+		<property name="address" length="200"/>
+		<property name="email" length="50"/>
+		<property name="mobile" length="11"/>
+	</class>
+</hibernate-mapping>

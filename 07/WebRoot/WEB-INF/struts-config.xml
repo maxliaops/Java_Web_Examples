@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <form-beans>
+    <form-bean name="goodsForm" type="com.actionForm.GoodsForm" />
+    <form-bean name="providerForm" type="com.actionForm.ProviderForm" />
+    <form-bean name="branchForm" type="com.actionForm.BranchForm" />
+    <form-bean name="userForm" type="com.actionForm.UserForm" />
+    <form-bean name="stockMainForm" type="com.actionForm.StockMainForm" />
+    <form-bean name="stockDetailForm" type="com.actionForm.StockDetailForm" />
+    <form-bean name="stockGoodsForm" type="com.actionForm.StockGoodsForm" />
+    <form-bean name="ifForm" type="com.actionForm.IfForm" />
+    <form-bean name="inStorageForm" type="com.actionForm.InStorageForm" />
+    <form-bean name="StorageForm" type="com.actionForm.StorageForm" />
+    <form-bean name="getUseForm" type="com.actionForm.GetUseForm" />
+    <form-bean name="loanForm" type="com.actionForm.LoanForm" />
+    <form-bean name="damageForm" type="com.actionForm.DamageForm" />
+  </form-beans>
+  <action-mappings>
+    <action name="goodsForm" path="/goods" scope="request" type="com.action.Goods" validate="true">
+      <forward name="error" path="/error.jsp" />
+      <forward name="goodsQuery" path="/goodsList.jsp" />
+      <forward name="goodsaddok" path="/goods_ok.jsp?para=1" />
+      <forward name="goodsModiQuery" path="/goodsModify.jsp" />
+      <forward name="goodsmodifyok" path="/goods_ok.jsp?para=2" />
+      <forward name="goodsdelok" path="/goods_ok.jsp?para=3" />
+    </action>
+    <action name="providerForm" path="/provider" scope="request" type="com.action.Provider" validate="true">
+      <forward name="error" path="/error.jsp" />
+      <forward name="providerQuery" path="/providerList.jsp" />
+      <forward name="providerQModify" path="/providerModify.jsp" />
+      <forward name="provideraddok" path="/provider_ok.jsp?para=1" />
+      <forward name="providermodiok" path="/provider_ok.jsp?para=2" />
+      <forward name="providerdelok" path="/provider_ok.jsp?para=3" />
+    </action>
+    <action name="branchForm" path="/branch" scope="request" type="com.action.Branch" validate="true">
+      <forward name="error" path="/error.jsp" />
+      <forward name="branchQuery" path="/branchList.jsp" />
+      <forward name="branchaddok" path="/branch_ok.jsp?para=1" />
+      <forward name="branchdelok" path="/branch_ok.jsp?para=3" />
+    </action>
+    <action name="userForm" path="/user" scope="request" type="com.action.User" validate="true">
+      <forward name="error" path="/error.jsp" />
+      <forward name="userQuery" path="/userList.jsp" />
+      <forward name="useraddok" path="/user_ok.jsp?para=1" />
+      <forward name="userQModify" path="/userModify.jsp" />
+      <forward name="usermodiok" path="/user_ok.jsp?para=2" />
+      <forward name="userdelok" path="/user_ok.jsp?para=3" />
+      <forward name="usermodipwdok" path="/user_ok.jsp?para=4" />
+      <forward name="loginok" path="/main.jsp" />
+    </action>
+    <action name="stockMainForm" path="/instorage" scope="request" type="com.action.Instorage" validate="true">
+      <forward name="error" path="/error.jsp" />
+      <forward name="stock" path="/stockAdd.jsp" />
+      <forward name="stockaddok" path="/transfer.jsp" />
+      <forward name="eligibleAddok" path="/ifDeal.do?action=inStockQuery" />
+      <forward name="login" path="/index.jsp" />
+    </action>
+    <action name="stockGoodsForm" path="/cart" scope="request" type="com.action.Cart" validate="true">
+      <forward name="error" path="/error.jsp" />
+      <forward name="add" path="/transfer.jsp" />
+    </action>
+    <action name="ifForm" path="/ifDeal" scope="request" type="com.action.IfDeal" validate="true">
+      <forward name="error" path="/error.jsp" />
+      <forward name="stockQuery" path="/stockQuery.jsp" />
+      <forward name="stockDetail" path="/stockDetail.jsp" />
+      <forward name="inStockQuery" path="/inStockQuery.jsp" />
+      <forward name="inStorageSQuery" path="/inStorageQuery.jsp" />
+      <forward name="loanApproveQuery" path="/loanApproveQuery.jsp" />
+      <forward name="loanBackQuery" path="/loanBackQuery.jsp" />
+      <forward name="loanQuery" path="/loanQuery.jsp" />
+      <forward name="damageQuery" path="/damageQuery.jsp" />
+      <forward name="getuseQuery" path="/getuseQuery.jsp" />
+      <forward name="loanDetail" path="/loanDetail.jsp" />
+      <forward name="getuseTotal" path="/getuseTotal.jsp" />
+      <forward name="damageTotal" path="/damageTotal.jsp" />
+      <forward name="branchTotal" path="/branchTotal.jsp" />
+    </action>
+    <action name="getUseForm" path="/getUse" scope="request" type="com.action.GetUse" validate="true">
+      <forward name="selStorageGoods" path="/getUseAdd.jsp" />
+      <forward name="getUseAddok" path="/getUseAdd_ok.jsp?para=1" />
+      <forward name="error" path="/error.jsp" />
+    </action>
+    <action name="loanForm" path="/loan" scope="request" type="com.action.Loan" validate="true">
+      <forward name="selStorageGoods" path="/loanAdd.jsp" />
+      <forward name="loanAddok" path="/loanAddok_ok.jsp?para=1" />
+      <forward name="loanApproveAddok" path="/loanAddok_ok.jsp?para=2" />
+      <forward name="loanbackAddok" path="/loanAddok_ok.jsp?para=3" />
+      <forward name="error" path="/error.jsp" />
+    </action>
+    <action name="damageForm" path="/damage" scope="request" type="com.action.Damage" validate="true">
+      <forward name="error" path="/error.jsp" />
+      <forward name="selGetuseGoods" path="/damageAdd.jsp" />
+      <forward name="damageAddok" path="/damageAddok_ok.jsp?para=1" />
+    </action>
+  </action-mappings>
+  <controller processorClass="com.action.SelfRequestProcessor" />
+  <message-resources parameter="ApplicationResources" />
+</struts-config>
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+	"http://struts.apache.org/dtds/struts-2.1.dtd" >
+<struts>
+	<!-- 前台登录 -->
+	<package name="shop.front" extends="shop-default">
+		<!-- 配置拦截器 -->
+		<interceptors>
+			<!-- 验证用户登录的拦截器 -->
+			<interceptor name="loginInterceptor" class="com.lyq.action.interceptor.CustomerLoginInteceptor"/>
+			<interceptor-stack name="customerDefaultStack">
+				<interceptor-ref name="loginInterceptor"/>
+    			<interceptor-ref name="defaultStack"/>
+			</interceptor-stack>
+		</interceptors>
+		<action name="index" class="indexAction">
+            <result>/WEB-INF/pages/index.jsp</result>
+        </action>
+	</package>
+	<!-- 消费者Action -->
+	<package name="shop.customer" extends="shop-default" namespace="/customer">
+		<action name="customer_*" method="{1}" class="customerAction">
+		<result name="input">/WEB-INF/page/user/customer_reg.jsp</result>
+		</action>
+	</package>
+	<!-- 商品Action -->
+	<package name="shop.product" extends="shop-default" namespace="/product">
+		<action name="product_*" class="productAction" method="{1}">
+			<result name="list">/WEB-INF/pages/product/product_list.jsp</result>
+			<result name="select">/WEB-INF/pages/product/product_select.jsp</result>
+			<result name="clickList">/WEB-INF/pages/product/product_click_list.jsp</result>
+			<result name="findList">/WEB-INF/pages/product/product_find_list.jsp</result>
+		</action>
+	</package>
+	<!-- 购物车Action -->
+	<package name="shop.cart" extends="shop.front" namespace="/product">
+		<action name="cart_*" class="cartAction" method="{1}">
+			<result name="list">/WEB-INF/pages/cart/cart_list.jsp</result>
+			<interceptor-ref name="customerDefaultStack"/>
+		</action>
+	</package>
+	<!-- 订单Action -->
+	<package name="shop.order" extends="shop.front" namespace="/product">
+		<action name="order_*" class="orderAction" method="{1}">
+			<result name="add">/WEB-INF/pages/order/order_add.jsp</result>
+			<result name="confirm">/WEB-INF/pages/order/order_confirm.jsp</result>
+			<result name="list">/WEB-INF/pages/order/order_list.jsp</result>
+			<result name="error">/WEB-INF/pages/order/order_error.jsp</result>
+			<interceptor-ref name="customerDefaultStack"/>
+		</action>
+	</package>
+</struts>

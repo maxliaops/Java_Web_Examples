@@ -1,0 +1,35 @@
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<!--
+td {
+	font-size: 9pt;	color: #000000;
+}
+
+a:hover {
+	font-size: 9pt;	color: #FF0000;
+	text-decoration:underline
+}
+a {
+	font-size: 9pt;	text-decoration: none;	color: black;
+	noline:expression(this.onfocus=this.blur);
+}
+input{
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	
+}
+.textarea {
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+}
+
+-->

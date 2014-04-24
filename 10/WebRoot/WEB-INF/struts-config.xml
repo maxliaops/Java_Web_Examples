@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<!-- 用户登录Form -->
+		<form-bean name="userLoginForm" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="pwd" type="java.lang.String" />
+			<form-property name="loginName" type="java.lang.String" />
+			<form-property name="id" type="java.lang.Integer" />
+			<form-property name="type" type="java.lang.String" />
+			<form-property name="mail" type="java.lang.String" />
+			<form-property name="pwd1" type="java.lang.String" />
+		</form-bean>
+		<!-- 学生信息Form -->
+		<form-bean name="stuUserForm" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="birthday" type="java.lang.String" />
+			<form-property name="stuNo" type="java.lang.String" />
+			<form-property name="tel" type="java.lang.String" />
+			<form-property name="specialtyId" type="java.lang.String" />
+			<form-property name="addr" type="java.lang.String" />
+			<form-property name="stuName" type="java.lang.String" />
+			<form-property name="stuSex" type="java.lang.String" />
+			<form-property name="id" type="java.lang.Integer" />
+			<form-property name="homeAddr" type="java.lang.String" />
+		</form-bean>
+		<!-- 专业信息Form -->
+		<form-bean name="specialtyForm" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="id" type="java.lang.Integer" />
+			<form-property name="isFinish" type="java.lang.Integer" />
+			<form-property name="name" type="java.lang.String" />
+			<form-property name="langthYear" type="java.lang.String" />
+			<form-property name="enterYear" type="java.lang.String" />
+		</form-bean>
+		<!-- 课程信息Form -->
+		<form-bean name="courseForm" type="org.apache.struts.action.DynaActionForm">
+			<form-property name="id" type="java.lang.Integer" />
+			<form-property name="courseInfo" type="java.lang.String" />
+			<form-property name="isFinish" type="java.lang.Byte" />
+			<form-property name="name" type="java.lang.String" />
+			<form-property name="teacherInfo" type="java.lang.String" />
+			<form-property name="credit" type="java.lang.Short" />
+			<form-property name="addr" type="java.lang.String" />
+			<form-property name="specialtyId" type="java.lang.Integer" />
+			<form-property name="teacherName" type="java.lang.String" />
+			<form-property name="schooltime" type="java.lang.String" />
+		</form-bean>
+	</form-beans>
+	<global-exceptions />
+	<global-forwards/>
+	<action-mappings>
+		<!-- 处理用户登录页面请求 -->
+		<action type="org.springframework.web.struts.DelegatingActionProxy"
+			name="userLoginForm" path="/userLogin" scope="request">
+			<forward name="index" path="/index.jsp" />
+			<forward name="manager" path="/manager/manager.jsp" />
+			<forward name="welcome" path="/stu/welcome.jsp" />
+			<forward name="addStuInfo" path="/stu/addStuInfo.jsp" />
+		</action> 
+		<!-- 处理显示学生基础信息请求 -->
+		<action attribute="stuUserForm" input="/stu/stuInfo.jsp" name="stuUserForm"
+			path="/stuUser" scope="request" parameter="method"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="welcome" path="/stu/welcome.jsp" />
+			<forward name="exit" path="/index.jsp" redirect="true" />
+			<forward name="selected" path="/stu/selected.jsp" />
+			<forward name="select" path="/stu/select.jsp" />
+			<forward name="courseInfo" path="/stu/courseInfo.jsp" />
+		</action>
+		<!-- 处理用户注册请求 -->
+		<action path="/reg" scope="request" name="userLoginForm"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="reg" path="/reg.jsp" />
+			<forward name="addStuInfo" path="/stu/addStuInfo.jsp" />
+		</action>
+		<!-- 处理修改密码请求 -->
+		<action path="/updatePwd" name="userLoginForm" scope="request"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="updatePwd" path="/updatePwd.jsp" />
+			<forward name="stuUpdatePwd" path="/stu/stuUpdatePwd.jsp"></forward>
+		</action>
+		<!-- 处理与专业信息有关请求 -->
+		<action path="/specialty" attribute="specialtyForm" scope="request"
+			name="specialtyForm" parameter="method"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="showSpecialty" path="/manager/showSpecialty.jsp" />
+		</action>
+		<!-- 处理与课程信息有关请求 --> 
+		<action path="/course" scope="request" name="courseForm"
+			parameter="method" type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="addCourse" path="/manager/addCourse.jsp" />
+			<forward name="showCourse" path="/manager/showCourse.jsp" />
+			<forward name="courseInfo" path="/manager/courseInfo.jsp" />
+		</action> 
+		<!-- 处理学生模块相关请求 -->
+		<action path="/statInfo" parameter="method" name="courseForm"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+			<forward name="showStat" path="/manager/showStat.jsp" />
+			<forward name="stuList" path="/manager/stuList.jsp" />
+		</action>   
+		<!-- 处理学生修改密码请求 --> 
+		<action path="/stuP" parameter="/stu/stuUpdatePwd.jsp"
+			type="org.apache.struts.actions.ForwardAction"></action>
+	</action-mappings>
+	<!-- 加载Spring插件 --> 
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation" value="/WEB-INF/applicationContext.xml" />
+	</plug-in>
+</struts-config>

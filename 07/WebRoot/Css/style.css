@@ -1,0 +1,117 @@
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<!--
+body {
+	FONT-SIZE: 9pt;
+	margin-left:0px;
+	margin-top:0px;	
+	margin-right:0px;
+	margin-bottom:0px;	
+	BACKGROUND-IMAGE: url(../images/bg.gif);
+	SCROLLBAR-FACE-COLOR: #107483; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+	SCROLLBAR-SHADOW-COLOR: #fcfcfc; COLOR: #000000;
+	SCROLLBAR-3DLIGHT-COLOR: #ececec;
+	SCROLLBAR-ARROW-COLOR: #ffffff;
+	SCROLLBAR-TRACK-COLOR: #ececec;
+	SCROLLBAR-DARKSHADOW-COLOR: #107483;
+	BACKGROUND-COLOR: #fcfcfc
+
+}
+td {
+	font-size: 9pt;	line-height:150%;
+}
+a:hover {
+	font-size: 9pt;	color: #FF6600;
+}
+a {
+	font-size: 9pt;	text-decoration: none;	color: #3C404D;
+}
+.btn_grey {
+	font-family: "宋体";	font-size: 9pt;color: #333333;	
+	background-color: #eeeeee;cursor: hand;padding:1px;height:19px;
+	border-top: 1px solid #FFFFFF;border-right:1px solid #666666;
+	border-bottom: 1px solid #666666;border-left: 1px solid #FFFFFF;
+}
+.word_Green {
+	font-size: 9pt;
+	color: #B9CA64;
+}
+.word_white {
+	font-size: 9pt;
+	color: #FFFFFF;
+}
+.word_grey{
+	font-size: 9pt;
+	color: #777777;
+}
+.txt_grey {
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+	width:110;
+}
+input {
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+}
+.wenbenkuang {
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+}
+.search  { font-family: 宋体; font-size: 9pt; color: #000000; background-color: #EEEEEE; 
+           border: 1px Hidden #000000; }
+.tableBorder {
+	border: #C6CCC6 1px solid
+}
+.tableBorder_Top{
+	border:1px solid #9CA6C6;
+	border-bottom-style:none;
+	border-left-style:none; 
+	border-right-style:none
+}
+.tableBorder_Botton{
+	border:1px solid #9CA6C6;
+	border-top-style:none;
+	border-left-style:none; 
+	border-right-style:none
+}
+.menuitems1{
+	margin:2px;padding:1px;word-break:keep-all;background-image:url("images/item_out.gif");
+}
+div.quote{margin:5px 20px;border:1px solid #8492b9;padding:5px;background:#8492b9 ;line-height : normal ;
+}
+div.HtmlCode{margin:5px 20px;border:1px solid #AAAAAA;padding:5px; background:#FDFDDF ;
+font-size:12px;font-family:Tahoma;font-style : oblique;line-height : normal ;font-weight:bold;
+}
+.menuskin {
+	BORDER: #666666 1px solid; VISIBILITY: hidden;
+	POSITION: absolute; 
+	background-image:url("../images/item_out.gif");
+	background-repeat : repeat-y;
+    Filter: Alpha(Opacity=85);
+	}
+.noborder{
+border-style:none;
+}
+.tableBorder_B{
+	border:1px solid #9CA6C6;
+	border-left-style:none; 
+	border-right-style:none;
+	border-Top-style:none; 
+}
+.tableBorder_B1{
+	border:1px solid #FF0000;
+	border-left-style:none; 
+	border-right-style:none;
+	border-Top-style:none; 
+}
+select{
+	font-size: 12px;
+	border:1px solid #9CA6C6;
+}
+-->

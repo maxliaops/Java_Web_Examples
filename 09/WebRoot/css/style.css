@@ -1,0 +1,60 @@
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<!--
+body {
+	FONT-SIZE: 9pt;
+	margin:0px;
+	background-image: url("pageBackImg.jpg");
+	text-align : left;
+	text-transform : none;
+	line-height : normal;
+	vertical-align : text-top;
+	text-indent : 1px;
+	display :  block;
+	font-family : Verdana,Arial, sans-serif;
+	color : black;
+	white-space : normal;
+/*	scrollbar-face-color : Cornflowerblue;
+	scrollbar-shadow-color : Slategray;
+	scrollbar-highlight-color : Lightslategray;
+	scrollbar-3dlight-color : Slategray;
+	scrollbar-darkshadow-color : Black;
+	scrollbar-track-color : Lightsteelblue;
+	scrollbar-arrow-color : Gainsboro;*/
+}
+image{
+	border-color:#999999;
+}
+td {
+	font-size: 9pt; line-height:144%;
+}
+a:hover {
+	font-size: 9pt;	color: #CC0000;
+}
+a {
+	font-size: 9pt;	text-decoration: none;	color: #000000;
+}
+input {
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+}
+hr{
+color:#9CA6C6;
+}
+.hand {cursor:hand
+	
+	}
+.word_orange {
+	font-size: 9pt;
+	color: #FF6600;
+}
+.button_03   { background-image: 
+               url('images/button_03.gif'); 
+               background-repeat: no-repeat; text-align: center; padding-top: 
+               3px; background-position: center 50% }
+div.quote{margin:5px 20px;padding:5px;background:#8492b9 ;line-height : normal ;
+}
+div.HtmlCode{margin:5px 20px;border:1px solid #AAAAAA;padding:5px; background:#FDFDDF ;
+font-size:12px;font-family:Tahoma;font-style : oblique;line-height : normal ;font-weight:bold;
+}
+-->

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- 将Bean交给Spring管理 -->
+	<constant name="struts.objectFactory" value="spring" />
+	<package name="default" extends="struts-default">
+		<action name="homeAction_*" class="homeAction" method="{1}">
+			<result name="index">index.jsp</result>
+		</action>
+		<action name="userAction_*" class="userAction" method="{1}">
+			<result name="toRegisterPage">/WEB-INF/jsp/user/register.jsp</result>
+			<result name="toSuccessPage">/WEB-INF/jsp/user/success.jsp</result>
+			<result name="toUpdatePage">/WEB-INF/jsp/user/update.jsp</result>
+			<result name="toLoginPage">/WEB-INF/jsp/user/login.jsp</result>
+			<result name="relogin">/WEB-INF/jsp/user/relogin.jsp</result>
+			<result name="toForumPage" type="chain">articleAction_forum</result>
+			<result name="exitSys" type="chain">homeAction_index</result>
+		</action>
+		<action name="articleAction_*" class="articleAction" method="{1}">
+			<result name="forum">/WEB-INF/jsp/article/forum.jsp</result>
+			<result name="toAddArticlePage">/WEB-INF/jsp/article/addArticle.jsp</result>
+			<result name="myArticle">/WEB-INF/jsp/article/myArticle.jsp</result>
+			<result name="singleArticle">/WEB-INF/jsp/article/singleArticle.jsp</result>
+			<result name="querySingleArticleForUpdate">/WEB-INF/jsp/article/updateArticle.jsp</result>
+			<result name="searchResult">/WEB-INF/jsp/article/searchResult.jsp</result>
+			<result name="type_article">/WEB-INF/jsp/article/type_article.jsp</result>
+			<result name="userArticle">/WEB-INF/jsp/article/searchResult.jsp</result>
+		</action>
+		<action name="replyAction_*" class="replyAction" method="{1}">
+			<result name="success" type="chain"></result>
+		</action>
+	</package>
+
+</struts>

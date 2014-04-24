@@ -1,0 +1,153 @@
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<!--
+td {
+	font-size: 9pt;	color: #000000;
+}
+a:hover {
+	font-size: 9pt;	color: #FF0000;
+}
+a {
+	font-size: 9pt;	text-decoration: none;	color: #000000;
+	noline:expression(this.onfocus=this.blur);
+}
+img{
+	border:0;
+}
+.img1{
+	border:1;
+}
+.blue {
+	font-size: 9pt;	color: #034683;
+}
+.bgcolor {
+	font-size: 9pt;	color: #1980DB;
+}
+
+
+/*设置表单的样式*/
+
+input{
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+
+}
+
+
+
+
+
+
+/*设置前台搜索按钮的样式*/
+.button{
+	border: 0px solid #999999;
+
+}
+
+
+
+/*设置网站的背景颜色及上、下，左和右的边界值*/
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color:#26436F;
+	                 
+}
+
+
+/*设置退出系统的超链接*/
+.a1:link {    
+	COLOR: #000000; TEXT-DECORATION: none; font-size:10pt;font-weight:bolder;
+}
+.a1:visited {   
+	COLOR: #000000; TEXT-DECORATION: none; font-size:10pt;font-weight:bolder;
+}
+.a1:active {    
+	COLOR: #000000; TEXT-DECORATION: none; font-size:10pt;font-weight:bolder;
+}
+.a1:hover {   
+	COLOR: red; font-size:10pt;font-weight:bolder;
+}
+
+
+
+.a2:link {    
+	COLOR: #ffffff; TEXT-DECORATION: none; font-size:10pt;font-weight:bolder;
+}
+.a2:visited {   
+	COLOR: #ffffff; TEXT-DECORATION: none; font-size:10pt;font-weight:bolder;
+}
+.a2:active {    
+	COLOR: #ffffff; TEXT-DECORATION: none; font-size:10pt;font-weight:bolder;
+}
+.a2:hover {   
+	COLOR: red; font-size:10pt;font-weight:bolder;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hrr{
+border:1px dashed #86BCD4; height: 1;
+width:95%;
+}
+
+
+
+/*设置下拉列表框的样式*/
+select {
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+}
+
+
+
+
+
+
+
+
+
+/*设置textarea文本框的样式*/
+textarea {
+    font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+}
+
+.text {
+	
+	font-size: 12px;
+	line-height: 25px;
+	letter-spacing:1px;
+	color: #000000;
+	
+}
+
+
+
+
+
+
+
+
+
+
+-->

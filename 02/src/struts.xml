@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>  
+   <package name="wyLogistics" extends="struts-default">
+       <action name="admin_*" class="com.webtier.AdminAction" method="{1}">
+           <result name="success">/admin_{1}.jsp</result>
+           <result name="input">/admin_{1}.jsp</result>
+       </action>       
+       <action name="car_*" class="com.webtier.CarAction" method="{1}">
+           <result name="success">/car_{1}.jsp</result>
+           <result name="input">/car_{1}.jsp</result>
+           <result name="operationSuccess" type="redirect">car_queryCarList.action</result>                                      
+       </action>
+       <action name="customer_*" class="com.webtier.CustomerAction" method="{1}">
+           <result name="success">/customer_{1}.jsp</result>  
+           <result name="input">customer_queryCustomerList.action</result> 
+           <result name="operationSuccess1" type="redirect">customer_queryCustomerList.action</result>                                 
+       </action> 
+      <action name="goods_*" class="com.webtier.GoodsAction" method="{1}">
+           <result name="success">/goods_{1}.jsp</result>  
+           <result name="deleteSuccess" type="redirect">goods_queryGoodsList.action</result>    
+      </action>    
+   </package>
+</struts>
+    
+    

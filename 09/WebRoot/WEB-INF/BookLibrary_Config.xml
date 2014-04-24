@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd" >
+<beans default-autowire="byName">	
+	<!--定义各种控制器类-->
+	<bean id="BookManager" class="com.spring.controller.BookManager">
+		<property name="methodNameResolver">
+			<ref local="MethodResolver" />
+		</property>
+		<property name="dao">
+			<ref bean="DAOProxy" />
+		</property>
+		<property name="addPage">
+			<value>/bookview/bookReg</value>
+		</property>
+		<property name="searchPage">
+			<value>/bookview/bookService</value>
+		</property>
+		<property name="bookDetailPage">
+			<value>/bookview/bookDetail</value>
+		</property>
+		<property name="bookBorrowPage">
+			<value>/bookview/bookBorrow</value>
+		</property>
+		<property name="borrowSearchPage">
+			<value>/bookview/borrowService</value>
+		</property>
+		<property name="borrowReturnPage">
+			<value>/bookview/bookReturn</value>
+		</property>
+	</bean>
+	<bean id="bookReturn"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName">
+			<value>/bookview/bookReturn</value>
+		</property>
+	</bean>
+	<bean id="bookBorrow"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName">
+			<value>/bookview/bookBorrow</value>
+		</property>
+	</bean>
+	<bean id="bookReg"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName">
+			<value>/bookview/bookReg</value>
+		</property>
+	</bean>
+	<bean id="borrowService"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName">
+			<value>/bookview/borrowService</value>
+		</property>
+	</bean>
+
+	<bean id="MethodResolver"
+		class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/listBookOperation.htm">list</prop>
+				<prop key="/addBookOperation.htm">add</prop>
+				<prop key="/searchBookOperation.htm">search</prop>
+				<prop key="/detailBookOperation.htm">detail</prop>
+				<prop key="/modifyBookOperation.htm">modify</prop>
+				<prop key="/borrowBookOperation.htm">borrow</prop>
+				<prop key="/returnBookOperation.htm">returnBook</prop>
+				<prop key="/borrowSearchBookOperation.htm">borrowSearch</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd" >
+<beans default-autowire="byName">
+	<bean id="teaMethodResolver"
+		class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/regTeacherInfo.htm">reg</prop>
+				<prop key="/serviceTeacherInfo.htm">service</prop>
+				<prop key="/searchTeacherInfo.htm">search</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="teaLoader" class="com.spring.controller.TeaLoader">
+		<property name="methodNameResolver">
+			<ref bean="teaMethodResolver" />
+		</property>
+		<property name="dao">
+			<ref bean="DAOProxy" />
+		</property>
+	</bean>
+	<bean id="teaRegController"
+		class="com.spring.controller.TeaInfoController">
+		<property name="dao">
+			<ref bean="DAOProxy" />
+		</property>
+		<property name="successView">
+			<value>/docuview/doc_tea_info_reg</value>
+		</property>
+	</bean>
+</beans>

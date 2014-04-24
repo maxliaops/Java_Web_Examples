@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd 
+	http://www.springframework.org/schema/tx 
+  	http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- 配置数据源，这里为DBCP数据库连接池 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/db_database10" />
+		<property name="username" value="root" />
+		<property name="password" value="111" />
+	</bean>
+	<!-- 配置session工场 --> 
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<!-- 设置数据库方言 -->
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect
+				</prop>
+				<!-- 在控制台输出SQL语句 -->
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+		<!-- 配置映射文件 -->
+		<property name="mappingResources">
+			<list>
+				<value>com/jwy/dto/UserLogin.hbm.xml
+				</value>
+				<value>com/jwy/dto/Specialty.hbm.xml
+				</value>
+				<value>com/jwy/dto/Course.hbm.xml</value>
+				<value>com/jwy/dto/StuUser.hbm.xml
+				</value>
+				<value>com/jwy/dto/StuCourse.hbm.xml
+				</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 定义事务管理器 -->
+	<!---->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!--定义注释驱动-->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<!-- -->
+	<bean id="userLoginDao" class="com.jwy.dao.UserLoginDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="specialtyDao" class="com.jwy.dao.SpecialtyDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="courseDao" class="com.jwy.dao.CourseDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="stuUserDao" class="com.jwy.dao.StuUserDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<!-- -->
+	<bean name="/userLogin" class="com.jwy.action.UserLoginAction">
+		<property name="userLoginDao" ref="userLoginDao" />
+		<property name="stuUserDao" ref="stuUserDao" />
+		<property name="specialtyDao" ref="specialtyDao" />
+	</bean>
+	<bean name="/reg" class="com.jwy.action.RegAction">
+		<property name="userLoginDao" ref="userLoginDao" />
+		<property name="specialtyDao" ref="specialtyDao" />
+	</bean>
+	<bean name="/stuUser" class="com.jwy.action.StuUserAction">
+		<property name="stuUserDao" ref="stuUserDao" />
+		<property name="courseDao" ref="courseDao" />
+		<property name="specialtyDao" ref="specialtyDao" />
+	</bean>
+
+	<bean name="/updatePwd" class="com.jwy.action.UpdatePwdAction">
+		<property name="userLoginDao" ref="userLoginDao" />
+	</bean>
+	<bean name="/specialty" class="com.jwy.action.SpecialtyAction">
+		<property name="specialtyDao" ref="specialtyDao" />
+	</bean>
+	<bean name="/course" class="com.jwy.action.CourseAction">
+		<property name="specialtyDao" ref="specialtyDao" />
+		<property name="courseDao" ref="courseDao" />
+	</bean>
+	<bean name="/statInfo" class="com.jwy.action.StatInfoAction">
+		<property name="specialtyDao" ref="specialtyDao" />
+		<property name="courseDao" ref="courseDao" />
+	</bean>
+</beans>

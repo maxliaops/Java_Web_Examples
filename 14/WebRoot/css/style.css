@@ -1,0 +1,75 @@
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<!--
+td {
+	font-size: 9pt;	color: #000000;
+}
+a:hover {
+	font-size: 9pt;	color: #FF6600;
+}
+a {
+	font-size: 9pt;	text-decoration: none;	color: #000000;
+	noline:expression(this.onfocus=this.blur);
+}
+a.link_gray {
+	font-size: 9pt;	text-decoration: none;	color: #676767;
+	noline:expression(this.onfocus=this.blur);
+}
+img{
+	border:0;
+}
+.img1{
+	border:1;
+}
+.blue {
+	font-size: 9pt;	color: #034683;
+}
+.bgcolor {
+	font-size: 9pt;	color: #1980DB;
+}
+.btn_grey {
+	font-family: "宋体";	font-size: 9pt;color: #333333;	
+	background-color: #eeeeee;cursor: hand;padding:1px;height:19px;
+	border-top: 1px solid #FFFFFF;border-right:1px solid #666666;
+	border-bottom: 1px solid #666666;border-left: 1px solid #FFFFFF;
+}
+input{
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+
+}
+.word_deepgrey{
+ color:#999999;
+}
+.word_orange{
+ color:#FF6600;
+}
+.word_green{
+ color:#82CBC8;
+}
+
+.word_gray{
+ color:#dddddd;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image:url(../images/bg.GIF);
+	background-repeat:repeat-x;
+}
+.textarea {
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+}
+
+
+hr{
+border-style:solid;
+color:#CCCCCC;
+}
+-->

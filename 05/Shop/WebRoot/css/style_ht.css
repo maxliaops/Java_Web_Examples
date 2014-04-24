@@ -1,0 +1,153 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+#box {
+	height: auto;
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+}
+#top {
+	background-image: url(images/ht_02_01.gif);
+	background-repeat: no-repeat;
+	float: left;
+	height: 71px;
+	width: 900px;
+	margin-bottom: 5px;
+}
+#toptiao {
+	height: 40px;
+	width: 400px;
+	margin-top: 20px;
+	text-align: right;
+	margin-left: 470px;
+}
+#bottom {
+	background-image: url(images/ht_02_21.gif);
+	background-repeat: no-repeat;
+	height: 27px;
+	width: 900px;
+	float: left;
+	margin-top: 5px;
+}
+#mid {
+	float: left;
+	height: auto;
+	width: 900px;
+}
+#left {
+	float: left;
+	height: 500px;
+	width: 192px;
+	background-image: url(images/ht_02_15.gif);
+	background-repeat: repeat-y;
+}
+#right {
+	float: left;
+	height: 490px;
+	width: 698px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+#left_top {
+	float: left;
+	height: 43px;
+	width: 192px;
+	background-image: url(images/ht_02_03.gif);
+	background-repeat: no-repeat;
+}
+
+#left_mid {
+	float: left;
+	height: 450px;
+	width: 179px;
+	margin-left: 6px;
+	border-bottom-width: 7px;
+	border-bottom-style: solid;
+	border-bottom-color: #5393db;
+}
+#right_top {
+	background-image: url(images/ht_02_06.gif);
+	background-repeat: no-repeat;
+	float: left;
+	height: 20px;
+	width: 700px;
+	padding-top: 9px;
+}
+#right_top01 {
+	background-image: url(images/ht_02_06.gif);
+	background-repeat: no-repeat;
+	float: left;
+	height: 29px;
+	width: 700px;
+
+}
+#right_mid {
+	float: left;
+	height: auto;
+	width: 700px;
+}
+#tiao {
+	padding: 3px;
+	float: left;
+	height: 24px;
+	width: 692px;
+	border: 1px solid #c6e8ff;
+	margin-top: 5px;
+}
+#tiao input {
+	color: #666666;
+	border: 1px solid #CCCCCC;
+}
+.word01 {
+	font-family: "宋体";
+	font-size: 12px;
+	font-weight: bold;
+	color: #006699;
+}
+#right_foot {
+	height: 29px;
+	width: 700px;
+	text-align: center;
+	margin-top: 5px;
+	float: left;
+}
+#right_foot01 {
+	float: left;
+	height: 20px;
+	width: 688px;
+	border: 1px solid #5896dc;
+	margin-top: 5px;
+	background-color: #c6e8ff;
+	line-height: 20px;
+	text-align: right;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+#boxdl {
+	height: 105px;
+	width: 232px;
+	margin-top: 180px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(images/bg_03.gif);
+	background-repeat: no-repeat;
+	padding-top: 147px;
+	padding-right: 47px;
+	padding-bottom: 53px;
+	padding-left: 224px;
+	font-family: "宋体";
+	font-size: 12px;
+	color: #000000;
+}
+#boxdl input {
+	font-family: "宋体";
+	font-size: 12px;
+	color: #0099CC;
+	border: 1px solid #CCCCCC;
+}

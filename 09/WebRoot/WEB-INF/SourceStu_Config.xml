@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd" >
+<beans default-autowire="byName">
+	
+	<bean id="CjMethodResolver"
+		class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/regCjInfo.htm">reg</prop>
+				<prop key="/searchCjInfo.htm">search</prop>
+				<prop key="/classSourceList.htm">ClassSourceList</prop>
+				<prop key="/gradeSourceList.htm">GradeSourceList</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="stuSourceInfoList"
+		class="com.spring.controller.SourceInfoList">		
+		<property name="dao">
+			<ref bean="DAOProxy" />
+		</property>		
+		<property name="methodNameResolver">
+			<ref bean="CjMethodResolver"/>
+		</property>
+	</bean>
+	<bean id="CjLoader" class="com.spring.controller.SourceLoader">
+		<property name="dao">
+			<ref bean="DAOProxy" />
+		</property>
+		<property name="methodNameResolver">
+			<ref bean="CjMethodResolver" />
+		</property>
+	</bean>
+	<bean id="CjRegBatchController"
+		class="com.spring.controller.SourceAddBatch">
+		<property name="successView">
+			<value>sourceview/doc_stusource_input</value>
+		</property>
+		<property name="dao">
+			<ref bean="DAOProxy" />
+		</property>
+	</bean>	
+</beans>

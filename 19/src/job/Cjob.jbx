@@ -1,0 +1,14 @@
+[PropertyInfo]
+jobid,int,false,false,jobid,jobid,true,<default>
+cname,String,false,false,cname,cname,true,<default>
+specialty,String,false,false,specialty,specialty,true,<default>
+job,String,false,false,job,job,true,<default>
+emolument,String,false,false,emolument,emolument,true,<default>
+ptime,String,false,false,ptime,ptime,true,<default>
+atime,String,false,false,atime,atime,true,<default>
+other,String,false,false,other,other,true,<default>
+[IconNames]
+
+
+
+

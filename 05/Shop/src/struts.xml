@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+	"http://struts.apache.org/dtds/struts-2.1.dtd" >
+<struts>
+	<!-- 前后台公共视图的映射 -->
+	<include file="com/lyq/action/struts-default.xml" />
+	<!-- 后台管理的Struts2配置文件 -->
+	<include file="com/lyq/action/struts-admin.xml" />
+	<!-- 前台台管理的Struts2配置文件 -->
+	<include file="com/lyq/action/struts-front.xml" />
+</struts>

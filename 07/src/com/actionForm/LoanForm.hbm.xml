@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.actionForm.LoanForm" table="tb_loan">
+    <id name="id" column="id" type="int">
+    <generator class="increment"/>
+    </id>
+    <property name="lno" column="lno" type="string"/>
+    <!--property name="goodsid"  column="goodsid"  type="int"/-->
+    <property name="number"  column="number"  type="int"/>
+    <property name="username"  column="username"  type="string" />
+    <property name="principal"  column="principal"  type="string"/>
+    <property name="borrowperson"  column="borrowperson"  type="string"/>
+    <property name="btel"  column="btel"  type="string"/>
+    <property name="bunit"  column="bunit"  type="string"/>
+    <property name="createtime"  column="createtime"  type="java.util.Date"/>
+    <property name="state"  column="state"  type="short"/>
+    <property name="taster"  column="taster"  type="string"/>
+    <property name="approvetime"  column="approvetime"  type="java.util.Date"/>
+    <property name="backperson"  column="backperson"  type="string"/>
+    <property name="backtime"  column="backtime"  type="java.util.Date"/>
+    <many-to-one name="goods" column="goodsid" class="com.actionForm.GoodsForm" cascade="none" fetch="join" lazy="false"/>
+  </class>
+</hibernate-mapping>

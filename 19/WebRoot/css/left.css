@@ -1,0 +1,37 @@
+/* CSS Document form bwm*/
+
+a{	
+	text-decoration: none;
+}
+#link a {
+	color: #ffffff; font-size:12px 
+}
+#link1 a {	
+	font-size: 12pt; text-decoration: none;
+	font-weight: bold; color:#F5f7f7; 
+}
+#link2 a {
+	text-decoration: none; 	margin:20px; color:#ffffff; 
+}
+td { 
+	font-size: 12px; 
+}
+#font1 {
+	font-weight:bold; font-size:16px; color:#F5f7f7;
+	margin:10px;
+}
+#top{
+	position:absolute; font-size:46px; top:78px; left: 246px; 
+	width: 240px; font-weight: bold;
+}
+#reg{
+	color:#33FF00;
+}
+#font {
+	font-family: "»ªÎÄÐÐ¿¬";
+	font-size:36px;
+	color: #993300;
+}
+body {
+	background-image: url(../images/bg.jpg);
+}

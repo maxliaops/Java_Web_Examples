@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.hibernate.model.DocuStuInfo" table="docu_stu_info" schema="dbo" catalog="db_school">
+        <id name="stuId" type="java.lang.String">
+            <column name="stu_id" length="12" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name" length="12" />
+        </property>
+        <property name="sex" type="java.lang.String">
+            <column name="sex" length="4" />
+        </property>
+        <property name="age" type="java.lang.Integer">
+            <column name="age" />
+        </property>
+        <property name="sfzhm" type="java.lang.String">
+            <column name="sfzhm" length="20" />
+        </property>
+        <property name="csrq" type="java.sql.Date">
+            <column name="csrq" length="50" />
+        </property>
+        <property name="zzmm" type="java.lang.String">
+            <column name="zzmm" length="10" />
+        </property>
+        <property name="jtdh" type="java.lang.String">
+            <column name="jtdh" length="15" />
+        </property>
+        <property name="jtdz" type="java.lang.String">
+            <column name="jtdz" length="50" />
+        </property>
+        <property name="jkzk" type="java.lang.String">
+            <column name="jkzk" length="8" />
+        </property>
+        <set name="courseStu" order-by="code" cascade="all" lazy="false" inverse="true" >
+        	<key column="stu_id"/>
+        	<one-to-many class="com.hibernate.model.CourseStuInfo"/>
+        </set>
+    </class>
+</hibernate-mapping>

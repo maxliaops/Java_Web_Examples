@@ -1,0 +1,42 @@
+body {
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        margin: 0;
+        font-size: 80%;
+        font-weight: bold;
+        background-image:url(leftBackImg.jpg);
+        }
+
+ul {
+        margin: 0;
+        padding: 0;
+        padding-top: 50px;
+        }
+
+/* =-=-=-=-=-=-=-[Menu Three]-=-=-=-=-=-=-=- */
+
+#menu3 {
+        width: 217px;
+        margin: 10px;
+        }
+
+#menu3 li a {
+          voice-family: "\"}\"";
+          voice-family: inherit;
+          height: 30px;
+       	  text-decoration: none;
+        }
+
+#menu3 li a:link, #menu3 li a:visited {
+        color: #888;
+        display: block;
+        background: url(menu3.gif);
+        padding: 8px 0 0 30px;
+        padding-right: 35px;
+        }
+
+#menu3 li a:hover, #menu3 li #current, #menu3 li a:active {
+        color: #283A50;
+        background: url(menu3.gif) 0 -32px;
+        padding: 8px 0 0 30px;
+        padding-right: 35px;
+        }

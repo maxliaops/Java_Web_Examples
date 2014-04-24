@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+"http://www.springframework.org/dtd/spring-beans.dtd" >
+<beans default-autowire="byName">
+	<!--定义各种控制器类-->
+	<bean id="stuinfcontroller"
+		class="com.spring.controller.StuInfoController">
+		<property name="dao">
+			<ref bean="DAOProxy"/>
+		</property>
+	</bean>
+	<bean id="studentReg"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName">
+			<value>docuview/doc_stuinfo_reg</value>
+		</property>
+	</bean>
+	<bean id="studentRegList"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName">
+			<value>docuview/doc_stuinfo_reglist</value>
+		</property>
+	</bean>
+	<bean id="paraMethodResolver"
+		class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/classinfoList.htm">listClass</prop>
+				<prop key="/getAllstuinfo.htm">listAllStu</prop>
+				<prop key="/stureginfoList.htm">listStuReg</prop>
+				<prop key="/createStuid.htm">createID</prop>
+				<prop key="/listStuModi.htm">listStuModi</prop>
+				<prop key="/listStuModiSave.htm">listStuModiSave</prop>
+				<prop key="/listStuRegSerach.htm">
+					listStuRegSerach
+				</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="infoListController"
+		class="com.spring.controller.InfoListController">
+		<property name="methodNameResolver">
+			<ref bean="paraMethodResolver" />
+		</property>
+		<property name="dao">
+			<ref bean="DAOProxy" />
+		</property>
+	</bean>	
+</beans>

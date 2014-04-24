@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration
+          PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.driver_class"><!--指定连接数据库用的驱动-->
+      com.microsoft.sqlserver.jdbc.SQLServerDriver
+    </property>
+    <property name="connection.url"><!--指定连接数据库的路径-->
+      jdbc:sqlserver://localhost:1433;DatabaseName=db_Material
+    </property>
+    <property name="connection.username">sa</property><!--指定连接数据库的用户名-->
+    <property name="connection.password"></property><!--指定连接数据库的密码-->
+    <property name="show_sql">false</property><!--当show_sql属性为true时表示在程序运行时在控制台输出SQL语句，默认为false，建议在调试程序时设为true，发布程序之前再改为false,因为输出SQL语句会影响程序的运行速度-->
+    <mapping resource="com/actionForm/GoodsForm.hbm.xml"/><!--指定持久化类映射文件-->
+    <mapping resource="com/actionForm/ProviderForm.hbm.xml"/>
+    <mapping resource="com/actionForm/BranchForm.hbm.xml"/>
+    <mapping resource="com/actionForm/UserForm.hbm.xml"/>
+    <mapping resource="com/actionForm/StockMainForm.hbm.xml"/>
+    <mapping resource="com/actionForm/StockDetailForm.hbm.xml"/>
+    <mapping resource="com/actionForm/StockMainViewForm.hbm.xml"/>
+    <mapping resource="com/actionForm/InStorageForm.hbm.xml"/>
+    <mapping resource="com/actionForm/StorageForm.hbm.xml"/>
+    <mapping resource="com/actionForm/CheckForm.hbm.xml"/>
+    <mapping resource="com/actionForm/GetUseForm.hbm.xml"/>
+    <mapping resource="com/actionForm/LoanForm.hbm.xml"/>
+    <mapping resource="com/actionForm/DamageForm.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>
+       <class name="com.hiernate.persistence.TongXunAdd" table="tb_tongxunadd" lazy="false" 
+            >
+          <id name="id" column="Id" type="int" >
+             <generator class="increment" />
+          </id>
+          <property name="name11" column="name11" type="string" />
+          <property name="birthday" column="birthday" type="date"/>
+          <property name="Sex" column="sex" type="string"/>
+          <property name="hy" column="hy" type="string"/>
+          <property name="department" column="department" type="string"/>
+          <property name="zw" column="zw" type="string"/>
+          <property name="cf" column="cf" type="string"/>
+          <property name="cs" column="cs" type="string"/>
+          <property name="phone"  column="phone" type="string"/>
+          <property name="phone1" column="phone1" type="string"/>
+          <property name="email" column="email" type="string"/>
+          <property name="postcode" column="postcode" type="string"/>
+          <property name="OICQ" column="OICQ" type="string"/>
+          <property name="family" column="family" type="string"/>
+          <property name="address" column="address" type="string"/>
+           <property name="remark" column="remark" type="string"/>
+            <property name="name1" column="name1" type="int"/>
+       </class>
+    </hibernate-mapping>

@@ -1,0 +1,97 @@
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<!--
+body {
+	FONT-SIZE: 9pt;
+	margin:0px;
+	SCROLLBAR-FACE-COLOR: #dddddd; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+	SCROLLBAR-SHADOW-COLOR: #fcfcfc; COLOR: #000000;
+	SCROLLBAR-3DLIGHT-COLOR: #eeeeee;
+	SCROLLBAR-ARROW-COLOR: #ffffff;
+	SCROLLBAR-TRACK-COLOR: #eeeeee;
+	SCROLLBAR-DARKSHADOW-COLOR: #666666;
+	/*BACKGROUND-COLOR: #F0F0F0;*/
+	BACKGROUND-IMAGE: url(../Images/bg_01.gif);
+
+}
+td {
+	font-size: 9pt; line-height:144%;
+}
+.title{
+	font-size:22;font-weight:bold;
+}
+a:hover {
+	font-size: 9pt;	color: #FF6600;
+}
+a {
+	font-size: 9pt;	text-decoration: none;	color: #777777;
+}
+.btn_grey {
+	font-family: "宋体";	font-size: 9pt;color: #333333;	
+	background-color: #eeeeee;cursor: hand;padding:1px;height:19px;
+	border-top: 1px solid #FFFFFF;border-right:1px solid #666666;
+	border-bottom: 1px solid #666666;border-left: 1px solid #FFFFFF;
+}
+.word_white {
+	font-size: 9pt;
+	color: #FFFFFF;
+	font-weight:bold;
+}
+.word_grey{
+	font-size: 9pt;
+	color: #7B7B7B;
+}
+.word_orange{
+	font-size: 9pt;
+	color: #FF6600;
+	text-decoration: underline;
+}
+.word_orange1{
+	font-size: 9pt;
+	color: #FF6600;
+}
+.word_darkGrey{
+	font-size: 9pt;
+	color: #4E4E4E;
+}
+.txt_grey {
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+	width:110;
+}
+input {
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+}
+.wenbenkuang {
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+}
+.tableBorder {
+	border: #EEEEEE 4px solid
+}
+.tableBorder_thin {
+	border: #C7C7C7 1px solid;
+}
+.tableBorder_Top{
+	border:1px solid #9CA6C6;
+	border-bottom-style:none;
+	border-left-style:none; 
+	border-right-style:none
+}
+.noborder{
+border-style:none;
+}
+.tableBorder_B{
+	border:1px solid #EEEEEE;
+	border-left-style:none; 
+	border-right-style:none;
+	border-Top-style:none; 
+}
+-->

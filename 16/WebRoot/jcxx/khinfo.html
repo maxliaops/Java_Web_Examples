@@ -1,0 +1,72 @@
+<html>
+<title>客户信息登记</title>
+<meta http-equiv="Content-Type" content="text/html">
+</head>
+<link href="../CSS/style.css" rel="stylesheet" type="text/css">
+<body>
+<table width="584" border="0" cellspacing="0" cellpadding="0">
+<tr>
+    <td height="27" bgcolor="#EEEEEE" class="tableBorder_gray">
+    &nbsp;<span  class="word_deepgrey"> 当前位置：基础信息管理 > </span>客户信息管理 &gt;&gt;&gt;</td>
+  </tr><tr><td>
+    <form name="form1" method="post" action="khinfo.jsp" >
+<br>
+<table width="96%" height="112"  border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="#F2F2F2">
+       <tr><td height="27" colspan="4">&nbsp;注:带*号为必填项</td></tr>
+        <tr>
+          <td height="25">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;客户全称：</td>
+          <td width="177"><input type="text" name="khname"> 
+            *</td>
+            <td width="116">&nbsp;&nbsp;&nbsp;&nbsp;客户简称：</td>
+            <td width="154"><input type="text" name="khjc"></td></tr>
+        <tr>
+          <td height="25">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;地址：</td>
+          <td><input type="text" name="address"> 
+            *</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;邮政编码：</td>
+            <td><input type="text" name="postcode"></td></tr>
+        <tr>
+          <td height="25">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电话：</td>
+          <td><input type="text" name="tel"> 
+            *</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;传真：</td>
+            <td><input type="text" name="fax"></td></tr>
+        <tr>
+          <td height="25">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系人：</td>
+          <td><input type="text" name="lxr"> 
+            *</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;联系人电话：</td>
+            <td><input type="text" name="lxrtel"></td></tr>
+        <tr>
+          <td height="25">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-Mail：</td>
+          <td><input type="text" name="email"></td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;开户银行：</td>
+            <td><input type="text" name="khyh"></td></tr>
+        <tr>
+          <td height="25">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;银行账号：</td>
+          <td><input type="text" name="yhzh"></td></tr>
+    <tr>
+        <td height="40" colspan="4" align="center">
+		<input name="submit1" type="button" class="btn_grey" onClick="check()" value="保存信息">          &nbsp;
+          <input  name="reset" type="reset" class="btn_grey" value="清除重置"></td>
+        </tr>
+   </table>   
+    </form>
+   </td></tr></table>
+</body>
+</html>
+<script language="javascript">
+function check()
+{
+  if(form1.khname.value==0){
+    alert("请输入客户全称");form1.khname.focus();return;}
+  if(form1.address.value==0){
+    alert("请输入联系地址");form1.address.focus();return;}
+  if(form1.tel.value==0){
+    alert("请输入联系电话");form1.tel.focus();return;}
+  if(form1.lxr.value==0){
+    alert("请输入联系人");form1.lxr.focus();return;}
+  form1.submit();
+}
+
+</script>

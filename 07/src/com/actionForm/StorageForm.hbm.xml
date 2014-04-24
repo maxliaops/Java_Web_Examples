@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.actionForm.StorageForm" table="tb_storage">
+    <id name="id" column="id" type="int">
+    <generator class="increment"/>
+    </id>
+    <property name="goodsid"  column="goodsid"  type="int"/>
+    <property name="number"  column="number"  type="int" />
+  </class>
+</hibernate-mapping>

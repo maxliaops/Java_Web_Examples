@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC 
+	"-//OpenSymphony Group//XWork Validator 1.0.3//EN" 
+	"http://www.opensymphony.com/xwork/xwork-validator-1.0.3.dtd" >
+<validators>
+	<field name="name">
+		<field-validator type="requiredstring" >
+			<message>收货人姓名不能为空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">1</param>
+			<param name="maxLength">12</param>
+			<message>收货人姓名长度必须在${minLength}到${maxLength}之间</message>
+		</field-validator>
+	</field>
+	<!--  <field name="address">
+		<field-validator type="requiredstring" >
+			<message>收货人地址不能为空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">8</param>
+			<param name="maxLength">100</param>
+			<message>收货人地址不够详细</message>
+		</field-validator>
+	</field>-->
+	
+	<field name="mobile">
+		<field-validator type="requiredstring" >
+			<message>联系电话不能为空</message>
+		</field-validator>
+		<field-validator type="stringlength">
+			<param name="minLength">8</param>
+			<param name="maxLength">12</param>
+			<message>联系电话在${minLength}到${maxLength}之间</message>
+		</field-validator>
+	</field>
+</validators>

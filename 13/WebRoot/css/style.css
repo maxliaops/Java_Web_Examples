@@ -1,0 +1,225 @@
+<!--
+td {
+	font-size: 9pt;	color: #000000;
+}
+
+th {
+	font-size: 11pt;	color: #000000;
+}
+
+
+img{
+
+border: 0px solid #999999;
+}
+
+
+a:hover {
+	font-size: 9pt;	color: #FF0000;
+}
+a {
+	font-size: 9pt;	text-decoration: none;	color: #000000;	
+}
+
+.blue {
+	font-size: 9pt;	color: #034683;
+}
+.bgcolor {
+	font-size: 9pt;	color: #1980DB;
+}
+.btn_grey {
+	font-family: "宋体";	font-size: 9pt;color: #333333;	
+	background-color: #eeeeee;cursor: hand;padding:1px;height:19px;
+	border-top: 1px solid #FFFFFF;border-right:1px solid #666666;
+	border-bottom: 1px solid #666666;border-left: 1px solid #FFFFFF;
+}
+input{
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #000000;
+	background-color: transparent;
+}
+
+
+
+.input1{
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #1BB6C7;
+	border: 1px solid #1BB6C7;
+	background:#000000;
+}
+
+.input2{
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #000000;
+	border: 1px solid #000000;
+	background-color: transparent;
+}
+
+
+
+
+
+
+.word_black{
+ color:#000000;
+ font-size: 10pt;
+ font-weight:bolder;
+}
+.word_deepgrey{
+ color:#999999;
+}
+.word_orange{
+ color:#FF6600;
+}
+.word_green{
+ color:#FEECEA;
+}
+.noborder{
+border:none;
+}
+.word_gray{
+ color:#dddddd;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;	
+	
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#000000,endColorStr=#05616C)
+	
+}
+textarea {
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+}
+
+
+hr{
+
+color:#E7D880;height:2;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.a1:link {    
+	COLOR: #EDE6BC; TEXT-DECORATION: none; font-size:13px;font-weight:bolder;letter-spacing:2px;
+}
+.a1:visited {   
+	COLOR: #EDE6BC; TEXT-DECORATION: none; font-size:13px;font-weight:bolder;letter-spacing:2px;
+}
+.a1:active {    
+	COLOR: #EDE6BC; TEXT-DECORATION: none; font-size:13px;font-weight:bolder;letter-spacing:2px;
+}
+.a1:hover {   
+	COLOR: #FF0000; font-size:13px;font-weight:bolder;letter-spacing:2px;
+}
+
+
+
+
+
+.a2:link {    
+	COLOR: #1BB6C7; TEXT-DECORATION: underline ; font-size:9pt;
+}
+.a2:visited {   
+	COLOR: #1BB6C7; TEXT-DECORATION: underline; font-size:9pt;
+}
+.a2:active {    
+	COLOR: #1BB6C7; font-size:9pt; text-decoration:underline;
+	
+}
+.a2:hover {   
+	COLOR: #FF0000; font-size:9pt;
+}
+
+
+
+
+
+
+.a3:link {    
+	COLOR: #000000; TEXT-DECORATION: none ; font-size:11pt;font-weight:bolder;
+}
+.a3:visited {   
+	COLOR: #000000; TEXT-DECORATION: none; font-size:11pt;font-weight:bolder;
+}
+.a3:active {    
+	COLOR: #000000; font-size:11pt; text-decoration:none;font-weight:bolder;	
+}
+.a3:hover {   
+	COLOR: #FF0000; font-size:11pt;font-weight:bolder;
+}
+
+
+
+
+.a4:link {    
+	COLOR: #000000; TEXT-DECORATION: none ; font-size:9pt;font-weight:bolder;
+}
+.a4:visited {   
+	COLOR: #000000; TEXT-DECORATION: none; font-size:9pt;font-weight:bolder;
+}
+.a4:active {    
+	COLOR: #000000; font-size:9pt; text-decoration:none;font-weight:bolder;	
+}
+.a4:hover {   
+	COLOR: #FF0000; font-size:9pt;font-weight:bolder;
+}
+
+
+
+
+
+
+select{
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+
+
+}
+
+.cannelBorder{
+border: 0px solid #999999;
+}
+
+
+
+.Border{
+border: 1px solid #000000;
+}
+
+
+
+.paragraph{
+    line-height:2em;
+	
+	
+	
+	
+}
+
+
+
+
+
+
+-->

@@ -1,0 +1,26 @@
+[PropertyInfo]
+craetedate,String,false,false, , ,true,<default>
+Createdate,String,false,false, , ,false,<default>
+id,int,false,false, , ,true,<default>
+Id,int,false,false, , ,false,<default>
+procolor,String,false,false, , ,true,<default>
+Procolor,String,false,false, , ,false,<default>
+productid,int,false,false, , ,true,<default>
+Productid,int,false,false, , ,false,<default>
+pronumber,int,false,false, , ,true,<default>
+Pronumber,int,false,false, , ,false,<default>
+propeople,String,false,false, , ,true,<default>
+Propeople,String,false,false, , ,false,<default>
+protype,int,false,false, , ,true,<default>
+Protype,int,false,false, , ,false,<default>
+ptime,String,false,false, , ,true,<default>
+Ptime,String,false,false, , ,false,<default>
+shopid,int,false,false, , ,true,<default>
+Shopid,int,false,false, , ,false,<default>
+status,int,false,false, , ,true,<default>
+Status,int,false,false, , ,false,<default>
+[IconNames]
+
+
+
+

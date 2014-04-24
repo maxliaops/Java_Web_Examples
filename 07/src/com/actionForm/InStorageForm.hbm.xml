@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.actionForm.InStorageForm" table="tb_instorage">
+    <id name="id" column="id" type="int">
+    <generator class="increment"/>
+    </id>
+    <property name="ino" column="ino" type="string"/>
+    <property name="stockid"  column="stockid"  type="int"/>
+    <property name="createTime"  column="createTime"  type="java.util.Date"/>
+    <property name="username"  column="username"  type="string" />
+  </class>
+</hibernate-mapping>

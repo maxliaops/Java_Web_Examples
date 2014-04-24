@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+  <struts>    
+    <package name="cityInfo" extends="struts-default">
+        <!-- 访问首页 -->
+        <action name="goindex" class="com.yxq.action.IndexAction">
+            <result>/view/IndexTemp.jsp</result>
+        </action>
+        <!-- 前台信息处理 -->
+        <action name="info_*" class="com.yxq.action.InfoAction" method="{1}">
+            <result>/view/IndexTemp.jsp</result>
+            <result name="input">/view/IndexTemp.jsp</result>
+        </action>               
+        <!-- 管理员登录/退出 -->
+        <action name="log_*" class="com.yxq.action.LogInOutAction" method="{1}">            
+            <result name="input">/pages/admin/Login.jsp</result>
+            <result name="login">/pages/admin/view/AdminTemp.jsp</result>
+            <result name="logout" type="redirectAction">goindex</result>
+        </action>    
+        <!-- 后台管理员操作 -->
+        <action name="admin_*" class="com.yxq.action.AdminAction" method="{1}">
+            <result name="input">/pages/admin/view/AdminTemp.jsp</result>
+            <result>/pages/admin/view/AdminTemp.jsp</result>
+            <result name="checkSuccess" type="redirectAction">
+                <param name="actionName">admin_*</param>
+                <param name="method">ListShow</param>
+            </result>
+            <result name="deleteSuccess" type="redirectAction">
+                admin_ListShow.action
+            </result>
+            <result name="setMoneySuccess">/pages/admin/view/AdminTemp.jsp</result>
+            <result name="UnSuccess">/pages/admin/view/AdminTemp.jsp</result>
+        </action>
+    </package>
+  </struts>
+    

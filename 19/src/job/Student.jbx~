@@ -1,0 +1,17 @@
+[PropertyInfo]
+sname,String,false,false,Sname,Sname,true,<default>
+password,String,false,false,password,password,true,<default>
+name,String,false,false,name,name,true,<default>
+age,int,false,false,age,age,true,<default>
+sex,int,false,false,sex,sex,true,<default>
+birthday,java.util.Date,false,false,birthday,birthday,true,<default>
+school,String,false,false,school,school,true,<default>
+specialty,String,false,false,specialty,specialty,true,<default>
+knowledge,String,false,false,knowledge,knowledge,true,<default>
+emial,String,false,false,emial,emial,true,<default>
+resume,String,false,false,resume,resume,true,<default>
+[IconNames]
+
+
+
+

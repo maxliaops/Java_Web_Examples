@@ -1,0 +1,257 @@
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<!--
+td {
+	font-size: 9pt;	color: #000000;
+}
+a:hover {
+	font-size: 9pt;	color: #FF0000;
+}
+a {
+	font-size: 9pt;	text-decoration: none;	color: #000000;
+	noline:expression(this.onfocus=this.blur);
+}
+img{
+	border:0;
+}
+.img1{
+	border:1;
+}
+.blue {
+	font-size: 9pt;	color: #034683;
+}
+.bgcolor {
+	font-size: 9pt;	color: #1980DB;
+}
+hr{
+　　border:1px dashed #000000; height: 1;
+
+}
+
+
+/*设置表单的样式*/
+
+input{
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+
+}
+
+
+
+
+
+
+/*设置前台搜索按钮的样式*/
+.button{
+	border: 0px solid #999999;
+
+}
+
+
+
+/*设置网站的背景颜色及上、下，左和右的边界值*/
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;	                 
+}
+
+
+/*设置退出系统的超链接*/
+.a1:link {    
+	COLOR: #FFFFFF; TEXT-DECORATION: none; font-size:9pt;font-weight:bolder;
+}
+.a1:visited {   
+	COLOR: #FFFFFF; TEXT-DECORATION: none; font-size:9pt;font-weight:bolder;
+}
+.a1:active {    
+	COLOR: #FFFFFF; TEXT-DECORATION: none; font-size:9pt;font-weight:bolder;
+}
+.a1:hover {   
+	COLOR: red; font-size:9pt;font-weight:bolder;
+}
+
+
+
+
+/*设置返回首页”的超链接*/
+.a2:link {    
+	COLOR: red; TEXT-DECORATION: underline; font-size:9pt;
+}
+.a2:visited {   
+	COLOR: red; TEXT-DECORATION: underline; font-size:9pt;
+}
+.a2:active {    
+	COLOR: red; TEXT-DECORATION: underline; font-size:9pt;
+}
+.a2:hover {   
+	COLOR: #FFFFFF; font-size:9pt;text-decoration:underline;
+}
+
+/*设置的下方区域的超链接*/
+.a3:link {    
+	COLOR: #424242; TEXT-DECORATION: none; font-size:9pt; 
+}
+.a3:visited {   
+	COLOR: #424242; TEXT-DECORATION: none; font-size:9pt;
+}
+.a3:active {    
+	COLOR: #424242; TEXT-DECORATION: none; font-size:9pt;
+}
+.a3:hover {   
+	COLOR: #FFFFFF; font-size:9pt;
+}
+
+
+/*设置后台左侧中的“添加用户”和“查看用户”的超链接*/
+.a4:link {    
+	COLOR: #FCEA00; font-size:9pt; text-decoration:underline;
+}
+.a4:visited {   
+	COLOR: #FCEA00;  font-size:9pt; text-decoration:underline;
+}
+.a4:active {
+	COLOR: #FFFFFF;  font-size:9pt; text-decoration:underline;
+}
+.a4:hover {   
+	COLOR: #5E0000; font-size:9pt; text-decoration:underline;
+}
+
+
+/*设置“进入后台”的超链接*/
+.a5:link {    
+	COLOR: #F1F1F1; font-size:9pt; text-decoration:underline;
+}
+.a5:visited {   
+	COLOR: #F1F1F1;  font-size:9pt; text-decoration:underline;
+}
+.a5:active {
+	COLOR: #F1F1F1;  font-size:9pt; text-decoration:underline;
+}
+.a5:hover {   
+	COLOR: #5E0000; font-size:9pt; text-decoration:underline;
+}
+
+/*设置下拉列表框的样式*/
+select {
+	font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+}
+
+
+
+/*设置“焦点导读”的超链接*/
+.a6:link {    
+	COLOR: #A2522D; TEXT-DECORATION: none; font-size:9pt;
+}
+.a6:visited {   
+	COLOR: #A2522D; TEXT-DECORATION: none; font-size:9pt;
+}
+.a6:active {    
+	COLOR: #A2522D; TEXT-DECORATION: none; font-size:9pt;
+}
+.a6:hover {   
+	COLOR: #000000; font-size:9pt;
+}
+
+
+
+
+
+
+/*设置textarea文本框的样式*/
+textarea {
+    font-family: "宋体";
+	font-size: 9pt;
+	color: #333333;
+	border: 1px solid #999999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.a7:link {    
+	COLOR: #A40001; font-size:9pt; text-decoration:underline;
+}
+.a7:visited {   
+	COLOR: #A40001;  font-size:9pt; text-decoration:underline;
+}
+.a7:active {
+	COLOR: #A40001;  font-size:9pt; text-decoration:underline;
+}
+.a7:hover {   
+	COLOR: #5E0000; font-size:9pt; text-decoration:underline;
+}
+
+
+
+
+
+
+
+.a8:link {    
+	COLOR: #309901; font-size:9pt; text-decoration:underline;
+}
+.a8:visited {   
+	COLOR: #309901;  font-size:9pt; text-decoration:underline;
+}
+.a8:active {
+	COLOR: #309901;  font-size:9pt; text-decoration:underline;
+}
+.a8:hover {   
+	COLOR: #5E0000; font-size:9pt; text-decoration:underline;
+}
+
+
+
+
+
+.a9:link {    
+	COLOR: #1D629B; font-size:9pt; text-decoration:underline;
+}
+.a9:visited {   
+	COLOR: #1D629B;  font-size:9pt; text-decoration:underline;
+}
+.a9:active {
+	COLOR: #1D629B;  font-size:9pt; text-decoration:underline;
+}
+.a9:hover {   
+	COLOR: #1D629B; font-size:9pt; text-decoration:underline;
+}
+.text {
+	
+	font-size: 12px;
+	line-height: 25px;
+	letter-spacing:1px;
+	color: #000000;
+	
+}
+
+
+
+
+
+
+
+
+
+
+-->

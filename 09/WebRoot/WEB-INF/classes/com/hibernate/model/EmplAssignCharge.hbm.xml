@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.hibernate.model.EmplAssignCharge" table="empl_assign_charge" schema="dbo" catalog="db_school">
+        <id name="lsh" type="java.lang.String">
+            <column name="lsh" length="32" />
+            <generator class="uuid.hex" />
+        </id>
+        <many-to-one name="docuTeaInfo" class="com.hibernate.model.DocuTeaInfo" fetch="select" lazy="false">
+            <column name="tea_id" length="20" not-null="true" />
+        </many-to-one>
+        <many-to-one name="systemClassInfo" class="com.hibernate.model.SystemClassInfo" fetch="select" lazy="false">
+            <column name="classid" length="10" not-null="true" />
+        </many-to-one>
+        <property name="rzrq" type="java.sql.Date">
+            <column name="rzrq" length="23" />
+        </property>
+        <property name="lizhiDate" type="java.sql.Date">
+            <column name="lizhiDate" length="4" />
+        </property>
+    </class>
+</hibernate-mapping>

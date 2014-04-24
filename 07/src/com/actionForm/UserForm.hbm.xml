@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+ <class name="com.actionForm.UserForm" table="tb_user">
+    <id name="id" column="id" type="int">
+    <generator class="increment"/>
+    </id>
+    <property name="name" column="name" type="string" not-null="true"/>
+    <property name="pwd"  column="pwd"  type="string" not-null="true"/>
+    <property name="setInstorage"  column="setInstorage"  type="byte"/>
+    <property name="setOutstorage"  column="setOutstorage"  type="byte"/>
+    <property name="setDeal"  column="setDeal"  type="byte"/>
+    <property name="setQuery"  column="setQuery"  type="byte"/>
+    <property name="setBasic"  column="setBasic"  type="byte"/>
+    <property name="setSys"  column="setSys"  type="byte"/>
+  </class>
+</hibernate-mapping>

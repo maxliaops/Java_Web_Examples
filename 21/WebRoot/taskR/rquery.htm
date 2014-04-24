@@ -1,0 +1,87 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>无标题文档</title>
+<link href="../css/style.css" rel="stylesheet">
+</style>
+<style type="text/css">
+<!--
+.style2 {color: #CC9933}
+-->
+</style>
+</head>
+<script language="JavaScript">
+function CheckDate(INDate)
+{ if(INDate=="")
+    {return true;}
+	subYY=INDate.substr(0,4)
+	//转换月份
+	if(INDate.indexOf('-',0)!=-1){	separate="-"}
+	else{
+		if(INDate.indexOf('/',0)!=-1){separate="/"}
+		else {return true;}}
+		area=INDate.indexOf(separate,0)
+		subMM=INDate.substr(area+1,INDate.indexOf(separate,area+1)-(area+1))
+		if(subMM.length<2){subMM="0"+subMM}
+	//转换日
+	area=INDate.lastIndexOf(separate)
+	subDD=INDate.substr(area+1,INDate.length-area-1)
+	if(eval(subDD)<10){subDD="0"+eval(subDD)}
+	NewDate=subYY+"-"+subMM+"-"+subDD
+	if(NewDate.length!=10){return true;}
+    if(NewDate.substr(4,1)!="-"){return true;}
+    if(NewDate.substr(7,1)!="-"){return true;}
+	if(NewDate.substr(5,2)>"12"){return true;}
+	if(NewDate.substr(8,2)>"31"){return true;}
+   return false;}
+</script>
+<script language="javascript">
+<!--
+function check(){
+	if(form1.datetime.value!=""){
+		if(CheckDate(form1.datetime.value)){
+				window.alert("您输入的日期有误，请重新输入！");
+				return false;
+		}
+		if(form1.dattime.value==""){
+			alert("请输入结束日期！");
+			return false;
+		}
+	}
+	if(form1.dattime.value!=""){
+		if(CheckDate(form1.dattime.value)){
+				window.alert("您输入的日期有误，请重新输入！");
+				return false;
+		}
+		if(form1.datetime.value==""){
+			alert("请输入起始日期！");
+			return false;
+		}
+	}
+}
+-->
+</script> 
+<body>
+<table width="610" border="0" align="left" cellpadding="0" cellspacing="0" bordercolor="#0065CE" bgcolor="#FFFFFF" class="tableBorder">
+  <form action="resulsql.jsp" method="post" name="form1">
+    <tr align="center" bgcolor="#0066CC">
+      <td height="26" colspan="16" bgcolor="#F7F3EF"><center class="style2">
+        <font size="+1" face="黑体">查询成果入库情况</font>
+      </center></td>
+    </tr>
+    <tr align="center" valign="middle">
+      <td height="22" colspan="16"><p>查询日期:
+          <input name="datetime" type="text" class="txt_grey" size="18">
+          至
+          <input name="dattime" type="text" class="txt_grey" size="18">
+          成果名称:
+          <input name="resultname" type="text" class="txt_grey" size="18">
+          <input name="Submit" type="submit" class="btn_grey" value="提交"  onClick="return check()">
+          <input name="Submit2" type="reset" class="btn_grey" value="重置">
+      </p></td>
+    </tr>
+ 
+  </form>
+</table>
+</body>
+</html>

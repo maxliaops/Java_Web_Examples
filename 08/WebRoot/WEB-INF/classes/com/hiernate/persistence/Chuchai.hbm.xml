@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    <hibernate-mapping>
+       <class name="com.hiernate.persistence.Chuchai" table="tb_Chuchai" lazy="false">
+          <id name="id" column="Id" type="int" >
+             <generator class="increment"/>
+          </id>
+          <property name="chuarea" column="chuarea" type="string"/>
+          <property name="time1" column="time1" type="date"/>
+          <property name="time2" column="time2" type="date"/>
+          <property name="name1" column="name1" type="string"/>
+          <property name="department" column="department" type="string"/>
+          <property name="state" column="state" type="string"/>
+        </class>
+    </hibernate-mapping>

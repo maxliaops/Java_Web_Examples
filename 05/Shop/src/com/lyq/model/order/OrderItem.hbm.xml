@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.lyq.model.order">
+	<class name="OrderItem" table="tb_orderItem">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="productId" not-null="true"/>
+		<property name="productName" not-null="true" length="200"/>
+		<property name="productPrice" not-null="true"/>
+		<property name="amount"/>
+		<!-- 多对一映射订单 -->
+		<many-to-one name="order" column="orderId"/>
+	</class>
+</hibernate-mapping>

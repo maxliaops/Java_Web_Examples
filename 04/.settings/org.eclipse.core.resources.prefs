@@ -1,0 +1,17 @@
+#Thu Feb 24 13:32:11 CST 2011
+eclipse.preferences.version=1
+encoding//WebRoot/js/articleTypes.js=UTF-8
+encoding//WebRoot/js/article_type.js=UTF-8
+encoding//WebRoot/js/index.js=UTF-8
+encoding//WebRoot/js/register.js=UTF-8
+encoding//WebRoot/js/search.js=UTF-8
+encoding//WebRoot/js/user.js=UTF-8
+encoding//WebRoot/txt/item.txt=UTF-8
+encoding//src/com/hrl/action/ActicleAction.java=UTF-8
+encoding//src/com/hrl/action/ActionConstant.java=UTF-8
+encoding//src/com/hrl/action/ReplyAction.java=UTF-8
+encoding//src/com/hrl/action/UserAction.java=UTF-8
+encoding//src/com/hrl/dao/impl/ArticleDaoImpl.java=UTF-8
+encoding//src/com/hrl/dao/impl/DefaultDaoImpl.java=UTF-8
+encoding//src/com/hrl/dao/impl/ReplyDaoImpl.java=UTF-8
+encoding//src/com/hrl/util/PageUtil.java=UTF-8
